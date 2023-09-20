@@ -3,12 +3,13 @@ import { BreadcumDataService } from 'src/app/shared/services/breadcum-data.servi
 import { StaticDataService } from 'src/app/shared/services/static-data.service';
 
 @Component({
-  selector: 'app-all-work-study-template',
-  templateUrl: './all-work-study-template.component.html',
-  styleUrls: ['./all-work-study-template.component.scss']
+  selector: 'app-all-products',
+  templateUrl: './all-products.component.html',
+  styleUrls: ['./all-products.component.scss']
 })
-export class AllWorkStudyTemplateComponent implements OnInit {
+export class AllProductsComponent implements OnInit {
 
+ 
   newOurWorkItems:any[]=[];
 
   @Input() ourWorkItems:any;
@@ -22,7 +23,7 @@ export class AllWorkStudyTemplateComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
 
     this.ourWorkItems.forEach((element:any) => {
-      if(element.subcategory == "Products"){
+      if(element.subcategory == "Projects"){
         this.newOurWorkItems.push(element);
         this.caseStudyAllItems=this.ourWorkItems;
         this.staticDataService.setAllCaseStudyData(this.ourWorkItems);
@@ -34,7 +35,6 @@ export class AllWorkStudyTemplateComponent implements OnInit {
     this.ourWorkItems.forEach((element:any) => {
 
       if(element.subcategory == "Products"){
-        this.newOurWorkItems.push(element);
         this.caseStudyAllItems=this.ourWorkItems;
         this.staticDataService.setAllCaseStudyData(this.ourWorkItems);
       }

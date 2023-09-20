@@ -48,6 +48,12 @@ export class PhotoGallery {
       category: "Celebrations",
       allPics:["assets/media/images/gallery/Yoga_Day/1.jpg","assets/media/images/gallery/Yoga_Day/2.jpg","assets/media/images/gallery/Yoga_Day/3.jpg","assets/media/images/gallery/Yoga_Day/4.jpg"]
     },
+    {
+      title: "Company Outing",
+      pic: "assets/media/images/gallery/company_outing.webp",
+      category: "Others",
+      allPics:["assets/media/images/gallery/Company_outing/1.jpg","assets/media/images/gallery/Company_outing/2.jpeg","assets/media/images/gallery/Company_outing/3.jpeg","assets/media/images/gallery/Company_outing/4.jpeg"]
+    },
     // {
     //   title: "Training For Freshers",
     //   pic: "assets/media/images/gallery/training-fresher.svg",
