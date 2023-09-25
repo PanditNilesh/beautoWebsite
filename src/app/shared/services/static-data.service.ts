@@ -25,19 +25,19 @@ export class StaticDataService {
   private incomingPage = new BehaviorSubject<any>(false);
   allWorkItems: any;
   private selectedTabOnBlog = new Subject<any>();
-   servicesdropdown = new Subject();
+  servicesdropdown = new Subject();
 
-  preSelectedBlog=new Blogs().blogData[0];
+  preSelectedBlog = new Blogs().blogData[0];
   private selectedBlog = new BehaviorSubject<any>(this.preSelectedBlog);
-  private changeBlogTab= new BehaviorSubject<string>("introduction");
+  private changeBlogTab = new BehaviorSubject<string>("introduction");
 
-  private selectedCaseStude=new BehaviorSubject<any>(new CaseStudy().caseStudyData[0]);
+  private selectedCaseStude = new BehaviorSubject<any>(new CaseStudy().caseStudyData[0]);
   private submittedDataSource = new BehaviorSubject<any>({});
   submittedCurrentData = this.submittedDataSource.asObservable();
 
-  private categoryServiceDataSource= new BehaviorSubject<string>('');
+  private categoryServiceDataSource = new BehaviorSubject<string>('');
   categoryServiceCurrentData = this.categoryServiceDataSource.asObservable();
-  constructor() { 
+  constructor() {
   }
 
   getOurWorksData(category: String) {
@@ -104,14 +104,14 @@ export class StaticDataService {
     }
     return this.galleryItems;
   }
-  getOurWorkData(category: string) {
+  getOurWorkData(category: string, type?: string) {
     let allWork = new OurWorks();
     this.allWorkItems = [];
     if (category == '') {
-      this.allWorkItems = allWork.ourWorksData;
+      this.allWorkItems = allWork.ourWorksData.filter(x => x.subcategory === type);
     } else {
       for (let i in allWork.ourWorksData) {
-        if (allWork.ourWorksData[i].category == category) {
+        if (allWork.ourWorksData[i].category == category && allWork.ourWorksData[i].subcategory == type) {
           this.allWorkItems.push(allWork.ourWorksData[i]);
         }
       }
@@ -187,12 +187,12 @@ export class StaticDataService {
     return this.selectedTabOnBlog.asObservable();
   }
 
-  setChangedTab(tab:string){
+  setChangedTab(tab: string) {
     console.log(tab)
     this.changeBlogTab.next(tab);
   }
 
-  getChangedTab(){
+  getChangedTab() {
     return this.changeBlogTab.asObservable();
   }
 
@@ -201,35 +201,35 @@ export class StaticDataService {
     return countries.countriesData;
   }
 
-  setBlog(blog:any){
+  setBlog(blog: any) {
     this.selectedBlog.next(blog);
   }
 
-  getBlog(){
+  getBlog() {
     return this.selectedBlog.asObservable();
   }
 
-  setCaseStude(caseStudy:any){
+  setCaseStude(caseStudy: any) {
     this.selectedCaseStude.next(caseStudy);
   }
 
-  getCaseStude(){
+  getCaseStude() {
     return this.selectedCaseStude.asObservable();
   }
 
-  setSubmittedData(data:any){
+  setSubmittedData(data: any) {
     this.submittedDataSource.next(data);
   }
 
-  getSubmittedData(){
+  getSubmittedData() {
     return this.submittedDataSource.asObservable();
   }
 
-  setCategoryService(data:any){
+  setCategoryService(data: any) {
     this.categoryServiceDataSource.next(data);
   }
 
-  getCategoryService(){
+  getCategoryService() {
     return this.categoryServiceDataSource.asObservable();
   }
 }
