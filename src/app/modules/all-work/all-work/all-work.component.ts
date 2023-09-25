@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BreadcumDataService } from 'src/app/shared/services/breadcum-data.service';
 import { StaticDataService } from 'src/app/shared/services/static-data.service';
 
@@ -8,16 +9,19 @@ import { StaticDataService } from 'src/app/shared/services/static-data.service';
   styleUrls: ['./all-work.component.scss']
 })
 export class AllWorkComponent implements OnInit {
-// @Input() selectedPage: any;
+  // @Input() selectedPage: any;
   ourWorkItems: any;
   selectedTab: string = "All"
   subCategoryList: any;
   selectedButton: string = '';
-  tabchanedrop:any= 'All';
-  constructor(private staticDataService: StaticDataService, private breadcumDataService: BreadcumDataService) { }
+  tabchanedrop: any = 'All';
+  type: string = "";
+
+  constructor(private staticDataService: StaticDataService, private breadcumDataService: BreadcumDataService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.ourWorkItems = this.staticDataService.getOurWorkData('');
+    this.type = this.route.snapshot.data.breadcrumb.includes("Products") ? "Products" : "Projects";
+    this.ourWorkItems = this.staticDataService.getOurWorkData('', this.type);
     this.breadcumDataService.changeData(' All');
     this.breadcumDataService.setclass('colorchange');
     // this.getDataByCategory(this.selectedPage)
@@ -26,13 +30,13 @@ export class AllWorkComponent implements OnInit {
   servicesView(tabname: any) {
     this.tabchanedrop = tabname;
     this.getDataByCategory(this.tabchanedrop)
-    switch(tabname){
+    switch (tabname) {
       case "All": this.breadcumDataService.changeData(' All'); break;
       case "Design": this.breadcumDataService.changeData(' Design'); break;
       case "Software": this.breadcumDataService.changeData(' Software'); break;
-      case "Mechanical":  this.breadcumDataService.changeData(' Mechanical'); break;
-      case "Electronics":  this.breadcumDataService.changeData(' Electronics'); break;
-      
+      case "Mechanical": this.breadcumDataService.changeData(' Mechanical'); break;
+      case "Electronics": this.breadcumDataService.changeData(' Electronics'); break;
+
       case "default": this.breadcumDataService.changeData(''); break;
     }
   }
@@ -42,26 +46,26 @@ export class AllWorkComponent implements OnInit {
   getDataByCategory(page: any) {
     console.log(page);
     switch (page) {
-      case "All": this.ourWorkItems = this.staticDataService.getOurWorkData('');
+      case "All": this.ourWorkItems = this.staticDataService.getOurWorkData('', this.type);
         this.breadcumDataService.changeData('');
         break;
-      case "Design": this.ourWorkItems = this.staticDataService.getOurWorkData('Design');
+      case "Design": this.ourWorkItems = this.staticDataService.getOurWorkData('Design', this.type);
         this.breadcumDataService.changeData(` ${this.selectedTab} `);
         this.subCategoryList = this.getSubcategoryList(this.ourWorkItems);
         break;
-      case "Software": this.ourWorkItems = this.staticDataService.getOurWorkData('Software');
+      case "Software": this.ourWorkItems = this.staticDataService.getOurWorkData('Software', this.type);
         this.breadcumDataService.changeData(` ${this.selectedTab} `);
         this.subCategoryList = this.getSubcategoryList(this.ourWorkItems);
         break;
-      case "Mechanical": this.ourWorkItems = this.staticDataService.getOurWorkData('Mechanical');
+      case "Mechanical": this.ourWorkItems = this.staticDataService.getOurWorkData('Mechanical', this.type);
         this.breadcumDataService.changeData(` ${this.selectedTab} `);
         this.subCategoryList = this.getSubcategoryList(this.ourWorkItems);
         break;
-      case "Electronics": this.ourWorkItems = this.staticDataService.getOurWorkData('Electronics');
+      case "Electronics": this.ourWorkItems = this.staticDataService.getOurWorkData('Electronics', this.type);
         this.breadcumDataService.changeData(` ${this.selectedTab} `);
         this.subCategoryList = this.getSubcategoryList(this.ourWorkItems);
         break;
-      default: this.ourWorkItems = this.staticDataService.getOurWorkData('');
+      default: this.ourWorkItems = this.staticDataService.getOurWorkData('', this.type);
         this.breadcumDataService.changeData('');
         break;
     }

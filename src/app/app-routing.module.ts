@@ -48,6 +48,13 @@ const routes: Routes = [
     loadChildren: () => import('./modules/all-work/all-work.module').then(m => m.AllWorkModule)
   },
   {
+    path: 'all-projects',
+    data: {
+      breadcrumb: 'All Projects'
+    },
+    loadChildren: () => import('./modules/all-work/all-work.module').then(m => m.AllWorkModule)
+  },
+  {
     path: 'about',
     data: {
       breadcrumb: 'About Us'
