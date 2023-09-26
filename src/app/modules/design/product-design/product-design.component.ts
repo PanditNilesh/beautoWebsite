@@ -9,8 +9,8 @@ import { CaseStudy } from 'src/app/core/mocks/case-study';
 })
 export class ProductDesignComponent implements OnInit {
 
-  caseStudyItems:any;
-  title!:string;
+  caseStudyItems: any;
+  title!: string;
   connectClicked: boolean = false;
   constructor() { }
 
@@ -20,16 +20,20 @@ export class ProductDesignComponent implements OnInit {
       left: 0,
       behavior: 'smooth'
     });
-    let data=new CaseStudy();
-    this.title="Case Studies";
-    this.caseStudyItems=[];
-    for(let i in data.caseStudyData){
-      if(data.caseStudyData[i].category=="Design"){
+    let data = new CaseStudy();
+    this.title = "Case Studies";
+    this.caseStudyItems = [];
+    for (let i in data.caseStudyData) {
+      if (data.caseStudyData[i].category == "Design") {
         this.caseStudyItems.push(data.caseStudyData[i]);
       }
-    } 
+    }
   }
   connect() {
     this.connectClicked = true;
+  };
+
+  connectCloseClicked(event: boolean) {
+    this.connectClicked = event;
   }
 }
