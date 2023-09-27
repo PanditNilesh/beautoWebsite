@@ -50,13 +50,6 @@ export class member {
             category: "Design",
             linkedin: "https://www.linkedin.com/in/dushyyant-s-16a46a18/",
         },
-        // {
-        //     pic: "assets/media/images/team/software/S1.png",
-        //     name: "Abhijeet Vasant Jadhav",
-        //     position: "Sr. Software Developer",
-        //     category: "Design",
-        //     linkedin:"https://www.linkedin.com/in/abhijit-jadhav-68397a11a/",
-        // },
         {
             pic: "assets/media/images/team/design-1.png",
             name: "Avadhut Shivdas",
@@ -64,21 +57,13 @@ export class member {
             category: "Design",
             linkedin: "https://www.linkedin.com/in/avadhut-shivadas-910205179/",
         },
-
-        {
-            pic: "assets/media/images/team/software/S1.png",
-            name: "Abhijeet Vasant Jadhav",
-            position: "Sr. Software Developer",
-            category: "Software",
-            linkedin: "",
-        },
-        {
-            pic: "assets/media/images/team/software/S14.png",
-            name: "Paresh madhukarrao Dahake",
-            position: "Software Architech",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S14.png",
+        //     name: "Paresh madhukarrao Dahake",
+        //     position: "Software Architech",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S13.png",
             name: "Siddharth Vitthal Sathe",
@@ -149,20 +134,20 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S46.png",
-            name: "Prachi Aditya Joshi",
-            position: "Jr.UI Developer",
-            category: "Software",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/software/S20.png",
-            name: "Somayajulu VJ Gadepalli",
-            position: "Practise Head  Data Science",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S46.png",
+        //     name: "Prachi Aditya Joshi",
+        //     position: "Jr.UI Developer",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/software/S20.png",
+        //     name: "Somayajulu VJ Gadepalli",
+        //     position: "Practise Head  Data Science",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S21.png",
             name: "Vaishnavi Vikramsinh Magar",
@@ -191,13 +176,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S25.png",
-            name: "B Ravi Kumar Yadav",
-            position: "UI/UX Designer",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S25.png",
+        //     name: "B Ravi Kumar Yadav",
+        //     position: "UI/UX Designer",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S10.png",
             name: "Sumegha Razdan",
@@ -212,13 +197,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S26.png",
-            name: "Sawta Akhade",
-            position: "Software Developer",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S26.png",
+        //     name: "Sawta Akhade",
+        //     position: "Software Developer",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S27.png",
             name: "Tummala Priyanka",
@@ -233,13 +218,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S7.png",
-            name: "Ganesh Ramesh Ghorapade",
-            position: "QA Engineer",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S7.png",
+        //     name: "Ganesh Ramesh Ghorapade",
+        //     position: "QA Engineer",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S29.png",
             name: "Kosuru Viswa Bhavani",
@@ -254,13 +239,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S32.png",
-            name: "Sarfraz Shaikh",
-            position: "IT Admin Executive",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S32.png",
+        //     name: "Sarfraz Shaikh",
+        //     position: "IT Admin Executive",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S8.png",
             name: "Yeka Jani Babu",
@@ -289,13 +274,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S11.png",
-            name: "Suraj Kailas Ghodake",
-            position: "Android Developer",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S11.png",
+        //     name: "Suraj Kailas Ghodake",
+        //     position: "Android Developer",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S34.png",
             name: "Somit Pandey",
@@ -324,13 +309,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S45.png",
-            name: "Vrushali Sanket Nanoti",
-            position: "Test Lead",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S45.png",
+        //     name: "Vrushali Sanket Nanoti",
+        //     position: "Test Lead",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/S47.png",
             name: "Rajat Kumar Padhy",
@@ -387,16 +372,16 @@ export class member {
             category: "Software",
             linkedin: ""
         },
+        // {
+        //     pic: "assets/media/images/team/software/S41.png",
+        //     name: "Mrunalinee Laxman Pisal",
+        //     position: "QA Automation Engineer",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
-            pic: "assets/media/images/team/software/S41.png",
-            name: "Mrunalinee Laxman Pisal",
-            position: "QA Automation Engineer",
-            category: "Software",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/software/S40.png",
-            name: "M Joe Moses Blezent Vivinas",
+            pic: "assets/media/images/team/software/S40.jpg",
+            name: "M Joe Moses BV",
             position: "Java Developer",
             category: "Software",
             linkedin: ""
@@ -450,20 +435,20 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/default.png",
-            name: "Dighe Monali Jalindar",
-            position: "Trainee associate",
-            category: "Software",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/software/default.png",
-            name: "Dhanshree Ilhe",
-            position: "Trainee",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/default.png",
+        //     name: "Dighe Monali Jalindar",
+        //     position: "Trainee associate",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/software/default.png",
+        //     name: "Dhanshree Ilhe",
+        //     position: "Trainee",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/default.png",
             name: "Dhanshree Devidas Borkhade",
@@ -485,13 +470,13 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/software/S44.png",
-            name: "Srinivasagan",
-            position: "Designation",
-            category: "Software",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/software/S44.png",
+        //     name: "Srinivasagan",
+        //     position: "Designation",
+        //     category: "Software",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/default.png",
             name: "Priyanka Prakash Ghadge",
@@ -513,20 +498,20 @@ export class member {
             category: "Software",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/cxo-3.png",
-            name: "Vinay Kumar Pingali",
-            position: "Vice President",
-            category: "Mechanical",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/mechanical-1.png",
-            name: "Soham Khamkar",
-            position: "Design engineer",
-            category: "Mechanical",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/cxo-3.png",
+        //     name: "Vinay Kumar Pingali",
+        //     position: "Vice President",
+        //     category: "Mechanical",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/mechanical-1.png",
+        //     name: "Soham Khamkar",
+        //     position: "Design engineer",
+        //     category: "Mechanical",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/mechanical-2.png",
             name: "Mangesh Ramling Utikar",
@@ -576,13 +561,13 @@ export class member {
             category: "Mechanical",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/cxo-2.png",
-            name: "Saswat Sahu",
-            position: "CTO",
-            category: "Electronics",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/cxo-2.png",
+        //     name: "Saswat Sahu",
+        //     position: "CTO",
+        //     category: "Electronics",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/electronics-1.png",
             name: "Sinto Antony",
@@ -590,20 +575,20 @@ export class member {
             category: "Electronics",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/electronics-2.png",
-            name: "Ankit Devani",
-            position: "Electronics Engineer",
-            category: "Electronics",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/electronics-3.png",
-            name: "Ashutosh Karve",
-            position: "Electronics Engineer",
-            category: "Electronics",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/electronics-2.png",
+        //     name: "Ankit Devani",
+        //     position: "Electronics Engineer",
+        //     category: "Electronics",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/electronics-3.png",
+        //     name: "Ashutosh Karve",
+        //     position: "Electronics Engineer",
+        //     category: "Electronics",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/electronics-4.png",
             name: "Shweta Desai",
@@ -639,13 +624,13 @@ export class member {
             category: "Admin",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/admin-4.png",
-            name: "Nikita Wagh",
-            position: "Hr Executive",
-            category: "Admin",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/admin-4.png",
+        //     name: "Nikita Wagh",
+        //     position: "Hr Executive",
+        //     category: "Admin",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/default.png",
             name: "Kandukuri Lokesh",
@@ -667,13 +652,13 @@ export class member {
             category: "Admin",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/sales-marketing-1.png",
-            name: "Udit Ingle",
-            position: "Associate Head of Business",
-            category: "Sales & Marketing",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/sales-marketing-1.png",
+        //     name: "Udit Ingle",
+        //     position: "Associate Head of Business",
+        //     category: "Sales & Marketing",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/default.png",
             name: "Himanshu Pandav",
@@ -681,34 +666,34 @@ export class member {
             category: "Sales & Marketing",
             linkedin: ""
         },
-        {
-            pic: "assets/media/images/team/sales-marketing-2.png",
-            name: "Dushyant Satarkar",
-            position: "Associate Business Head",
-            category: "Sales & Marketing",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/sales-marketing-3.png",
-            name: "Sandeep Singh N Rathaur",
-            position: "Sales & Marketing Executive",
-            category: "Sales & Marketing",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/sales-marketing-4.png",
-            name: "Priyanka Verma",
-            position: "Business Development Manager",
-            category: "Sales & Marketing",
-            linkedin: ""
-        },
-        {
-            pic: "assets/media/images/team/sales-marketing-5.png",
-            name: "Rahul P Desale",
-            position: "Assistanant",
-            category: "Sales & Marketing",
-            linkedin: ""
-        },
+        // {
+        //     pic: "assets/media/images/team/sales-marketing-2.png",
+        //     name: "Dushyant Satarkar",
+        //     position: "Associate Business Head",
+        //     category: "Sales & Marketing",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/sales-marketing-3.png",
+        //     name: "Sandeep Singh N Rathaur",
+        //     position: "Sales & Marketing Executive",
+        //     category: "Sales & Marketing",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/sales-marketing-4.png",
+        //     name: "Priyanka Verma",
+        //     position: "Business Development Manager",
+        //     category: "Sales & Marketing",
+        //     linkedin: ""
+        // },
+        // {
+        //     pic: "assets/media/images/team/sales-marketing-5.png",
+        //     name: "Rahul P Desale",
+        //     position: "Assistanant",
+        //     category: "Sales & Marketing",
+        //     linkedin: ""
+        // },
         {
             pic: "assets/media/images/team/software/default.png",
             name: "Ramakrishna Gajji",

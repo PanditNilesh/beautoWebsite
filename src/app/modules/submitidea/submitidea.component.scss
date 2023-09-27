@@ -105,7 +105,7 @@
     width: 100%;
 }
 
-input[type=file]::file-selector-button{
+input[type=file]::file-selector-button {
     justify-content: center;
     align-items: center;
     padding: 0px;
@@ -138,23 +138,29 @@ input[type=file]::file-selector-button{
     line-height: 24px;
     padding: 8px 12px;
     margin-top: 10px;
-  }
-  
-  #file-chosen{
+}
+
+#file-chosen {
     margin-left: 3rem;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-   }
+}
 
-  .file-res{
+.file-res {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  @media screen and (min-width: 480px) and (max-width: 896px)  {
+
+.alternate-contact-label{
+    font-size: 14px;
+    padding: 0;
+}
+
+@media screen and (min-width: 480px) and (max-width: 896px) {
     .space {
-          margin-left: 5rem
+        margin-left: 5rem
     }
 
     .submitideaForm {
@@ -162,7 +168,8 @@ input[type=file]::file-selector-button{
         margin-top: 20px;
         width: 95%;
     }
+
     .pt-5 {
-        padding-top: 0rem!important;
+        padding-top: 0rem !important;
     }
-    }
+}

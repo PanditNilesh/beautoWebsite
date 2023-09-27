@@ -17,6 +17,10 @@ export class ServicesComponent implements OnInit {
   showDetail:boolean=false;
   service:any;
   category:any= '';
+
+  caseStudyItems: any
+  title!: string;
+
   constructor(private staticDataService: StaticDataService, private breadcumDataService:BreadcumDataService) { 
 
     this.staticDataService.servicesdropdown.subscribe( res=>{
@@ -34,6 +38,9 @@ export class ServicesComponent implements OnInit {
     this.breadcumDataService.setclass('colorchange');
     this.ourWorksItems = this.serviceItems;
     window.scroll(0,0);
+
+    this.title = "Recent Case Studies";
+    this.caseStudyItems = this.staticDataService.getCaseStudyData("");
   }
   selectedTab = 0;
   servicesView(tabname: any) {

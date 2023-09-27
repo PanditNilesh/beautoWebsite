@@ -57,10 +57,10 @@ export class FilterComponent implements OnInit, OnDestroy {
   }
 
   onFilterButton(type: string) {
-    console.log(type);
-
     this.selectedItem = type;
     this.selectItem.emit(type);
+    console.log(type);
+    
   }
 
 
