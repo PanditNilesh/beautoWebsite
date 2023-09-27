@@ -50,7 +50,7 @@ export class PhotoGallery {
     },
     {
       title: "Company Outing",
-      pic: "assets/media/images/gallery/company_outing.webp",
+      pic: "assets/media/images/gallery/Company_outing.webp",
       category: "Others",
       allPics:["assets/media/images/gallery/Company_outing/1.jpg","assets/media/images/gallery/Company_outing/2.jpeg","assets/media/images/gallery/Company_outing/3.jpeg","assets/media/images/gallery/Company_outing/4.jpeg"]
     },
