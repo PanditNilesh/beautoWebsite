@@ -380,7 +380,7 @@ export class member {
         //     linkedin: ""
         // },
         {
-            pic: "assets/media/images/team/software/S40.png",
+            pic: "assets/media/images/team/software/S40.jpg",
             name: "M Joe Moses BV",
             position: "Java Developer",
             category: "Software",
