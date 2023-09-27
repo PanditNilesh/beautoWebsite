@@ -119,4 +119,6 @@
 <app-consulting-staffing *ngIf="showDetail && service == 'Consulting & Staffing' "></app-consulting-staffing>
 <app-infra-service *ngIf="showDetail && service == 'Infra Services' "></app-infra-service>
 <app-technology-consulting *ngIf="showDetail && service == 'Technology Consulting' "></app-technology-consulting>
+
+<app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
 </div>

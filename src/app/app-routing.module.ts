@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewsComponent } from './shared/components/news/news.component';
 import { SearchResultComponent } from './shared/components/search-result/search-result.component';
 import { SubmittedConfirmComponent } from './shared/components/submitted-confirm/submitted-confirm.component';
+import { ResourceComponent } from './modules/photo-gallery/resource/resource.component';
 
 const routes: Routes = [
   {
@@ -140,6 +141,10 @@ const routes: Routes = [
       breadcrumb: 'Search'
     },
     component: SearchResultComponent
+  },
+  {
+    path : 'resources',
+    component: ResourceComponent
   }
 ];
 

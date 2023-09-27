@@ -40,6 +40,7 @@ export class BlogsComponent implements OnInit {
 
   onSortBy(sortType: string) {
     this.blogItems = this.staticDataService.getFilteredData();
+    
     switch (sortType) {
       case "newly-added": this.blogItems = this.staticDataService.getFilteredData(); break;
       case "oldest_ones": this.blogItems = this.staticDataService.getFilteredData(); break;

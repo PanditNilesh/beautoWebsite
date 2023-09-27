@@ -5,6 +5,7 @@ import { CaseStudy } from 'src/app/core/mocks/case-study';
 import { CountryList } from 'src/app/core/mocks/countries';
 import { PhotoGallery } from 'src/app/core/mocks/gallery';
 import { OurWorks } from 'src/app/core/mocks/our-works';
+import { Resources } from 'src/app/core/mocks/resources';
 import { Services } from 'src/app/core/mocks/services';
 
 @Injectable({
@@ -132,6 +133,11 @@ export class StaticDataService {
       }
     }
     return this.allWorkItems;
+  }
+
+  getAllResourcesData(){
+    let ResorucesData = new Resources();
+    return ResorucesData.ResorucesData;
   }
 
   setAllTeamData(data: any) {
