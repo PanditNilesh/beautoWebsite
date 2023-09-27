@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewsComponent } from './shared/components/news/news.component';
 import { SearchResultComponent } from './shared/components/search-result/search-result.component';
 import { SubmittedConfirmComponent } from './shared/components/submitted-confirm/submitted-confirm.component';
+import { AllProductsComponent } from './modules/all-work/all-products/all-products.component';
 import { ResourceComponent } from './modules/photo-gallery/resource/resource.component';
 
 const routes: Routes = [
@@ -47,6 +48,14 @@ const routes: Routes = [
       breadcrumb: 'All Products'
     },
     loadChildren: () => import('./modules/all-work/all-work.module').then(m => m.AllWorkModule)
+    
+  },
+  {
+    path: 'all-projects',
+    data: {
+      breadcrumb: 'All Projects'
+    },
+    component:AllProductsComponent
   },
   {
     path: 'all-projects',
