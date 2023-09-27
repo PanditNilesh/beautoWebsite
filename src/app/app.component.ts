@@ -3,6 +3,8 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { NgwWowService } from 'ngx-wow';
 import { filter } from 'rxjs/operators';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,7 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'beauto-website';
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object, private wowService: NgwWowService) {
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object, private wowService: NgwWowService, private cookieService: CookieService) {
 
     // this.router.events.pipe(
     //   filter((event:any) => event instanceof NavigationEnd)
@@ -25,6 +27,8 @@ export class AppComponent {
         this.wowService.init(); // Load WoW animations when done navigating to page
       }
     });
+    this.cookieService.set('User', 'Text');
+
   }
   
   }
