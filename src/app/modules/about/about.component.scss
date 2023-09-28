@@ -258,7 +258,7 @@
 }
 
 .justify-text {
-    padding-right: 20%;
+    padding-right: 6%;
 }
 .about_img {
     width: 100%;
@@ -299,6 +299,7 @@
         background-position-y: 3px;
         background-size: 39px;
         text-align: justify;
+        padding: 20px
     }
 
     .box-2 {
@@ -306,6 +307,7 @@
         background-position-y: 3px;
         background-size: 39px;
         text-align: justify;
+        padding: 20px
     }
 
     .box-3{
@@ -313,6 +315,7 @@
         background-position-y: 3px;
         background-size: 39px;
         text-align: justify;
+        padding: 20px
     }
 
 }
@@ -367,3 +370,11 @@
         }
     }
 }
+// .bg-light {
+//     width: Fixed 1,440px;
+// height:400px;
+// top: 917px ;
+// padding: 100px, 98px, 100px, 150px ;
+// gap: 70px
+
+// }
