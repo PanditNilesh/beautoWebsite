@@ -9,8 +9,12 @@
                 <div class="bg-white p-4 py-4 rounded form-outline">
                     <form [formGroup]="exploreMoreForm" class="form" (ngSubmit)="onSubmit(exploreMoreForm)">
                         <div class="row">
-                            <!-- <div ><h4 class="back-button" >X</h4></div> -->
+                            <!-- <a class="close" href="javascript:void(0)" (click)="closeClicked()">    </a> -->
+
+
+                            <!-- <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> -->
                             <div class="col-md-6 mb-3">
+                                <div ><a class="back-button" (click)="closeClicked()" >X</a></div>
 
                                 <div class="floating-label">
                                     <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
