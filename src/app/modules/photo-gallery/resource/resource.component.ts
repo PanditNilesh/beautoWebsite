@@ -3,9 +3,8 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'src/app/core/mocks/menuitem';
 import { BreadcumDataService } from 'src/app/shared/services/breadcum-data.service';
 import { StaticDataService } from 'src/app/shared/services/static-data.service';
-import {filter} from 'rxjs/operators';
-import { BreadcrumbComponent } from 'src/app/shared/breadcrumb/breadcrumb.component';
-
+import { Subject, Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 @Component({
   selector: 'app-resource',
   templateUrl: './resource.component.html',
@@ -17,21 +16,37 @@ export class ResourceComponent implements OnInit {
   blogItems: any;
   subCategoryList: any;
   menuItems!: MenuItem[];
+  searchResource: string = '';
 
+  private searchSubject = new Subject<string>();
+  private searchSubscription: Subscription = new Subscription();
+  
   constructor(private staticDataService: StaticDataService, private breadcumDataService: BreadcumDataService, private router: Router,private activatedRoute: ActivatedRoute) { 
+    this.searchSubscription = this.searchSubject
+    .pipe(
+      debounceTime(500), 
+      distinctUntilChanged()
+    )
+    .subscribe(query => {
+      this.searchResourcesData(query);
+    }); 
   }
 
+  filteredType:string=''
   ngOnInit(): void {
-    this.breadcumDataService.changeData('Resources - All');
     this.blogItems = this.staticDataService.getAllResourcesData()
     this.staticDataService.setAllBlogData(this.blogItems);
     this.subCategoryList = this.getSubcategoryList()
     this.staticDataService.setFilterTabForBlog('All');
+    this.breadcumDataService.changeData('All');
   }
 
+
+
   onFilteredValue(filteredType: string) {
+    this.filteredType = filteredType;
     this.staticDataService.setFilterTabForBlog(filteredType)
-    this.breadcumDataService.changeData(` Resources - ${filteredType}`);
+    this.breadcumDataService.changeData(`${filteredType}`);
     this.blogItems = this.staticDataService.getAllBlogData();
     if (filteredType == "All") {
       this.blogItems = this.staticDataService.getAllBlogData();
@@ -84,8 +99,33 @@ export class ResourceComponent implements OnInit {
     // this.staticDataService.setFilterTabForBlog('All')
     this.breadcumDataService.changeData(' ' + data.title);
     // this.router.navigate(['/design/blogs'])
-    console.log(data);
-    
+  }
+
+  onSearchInputChange(event: Event): void {
+    this.searchSubject.next(this.searchResource);    
+  }
+
+  searchResourcesData(data : any) {
+    if (this.searchResource === '') {
+      this.blogItems = this.staticDataService.getAllBlogData();
+      // if (this.filteredType == "All") {
+      //   this.blogItems = this.staticDataService.getAllBlogData();
+      // }
+      // else {
+      //   this.blogItems = this.blogItems.filter(
+      //     (el: any) => el.category == this.filteredType
+      //   )
+      //   this.staticDataService.setFilteredData(this.blogItems);
+      // }
+    } else {
+      this.blogItems = this.blogItems.filter((item: any) =>
+        item.title.toLowerCase().includes(this.searchResource.toLowerCase())
+      );
+    }
+  }
+
+  ngOnDestroy() {
+    this.searchSubscription.unsubscribe();
   }
 
 }
