@@ -17,6 +17,7 @@ export class PhotoGalleryComponent implements OnInit {
   constructor(private staticDataService: StaticDataService, private breadcumDataService: BreadcumDataService) { }
 
   ngOnInit(): void {
+    this.breadcumDataService.changeData('All');
     this.galleryItems = this.staticDataService.getGalleryData('');
     this.breadcumDataService.setclass('colorchange');
   }

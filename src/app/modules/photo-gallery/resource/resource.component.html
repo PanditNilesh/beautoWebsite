@@ -9,6 +9,8 @@
               class="form-control"
               id="search"
               placeholder="Find out interesting topics"
+              [(ngModel)]="searchResource"
+              (input)="onSearchInputChange($event)"
             />
             <img src="assets/media/icons/search.svg" alt="search-icon" class="search-right" />
           </div>

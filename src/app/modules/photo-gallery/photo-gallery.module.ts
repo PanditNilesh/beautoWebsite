@@ -8,6 +8,7 @@ import { PhotoGalleryComponent } from './photo-gallery.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ImagePopupComponent } from './image-popup/image-popup.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ImagePopupComponent } from './image-popup/image-popup.component';
     CommonModule,
     PhotoGalleryRoutingModule,
     SharedModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
   ]
 })
 export class PhotoGalleryModule { }
