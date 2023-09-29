@@ -16,7 +16,7 @@ import { SubmitideaComponent } from './modules/submitidea/submitidea.component';
 import { NgwWowModule } from 'ngx-wow';
 import { BuildyourteamComponent } from './modules/buildyourteam/buildyourteam.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-// import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
 
 
 @NgModule({
@@ -38,6 +38,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     DragDropModule,
     // NgcCookieConsentModule,
     // NgcCookieConsentConfig
+    
   ],
 
   providers: [StaticDataService, BreadcumDataService],
