@@ -17,6 +17,7 @@ export class ResourceComponent implements OnInit {
   subCategoryList: any;
   menuItems!: MenuItem[];
   searchResource: string = '';
+  filteredType: string = '';
 
   private searchSubject = new Subject<string>();
   private searchSubscription: Subscription = new Subscription();
@@ -32,16 +33,14 @@ export class ResourceComponent implements OnInit {
     }); 
   }
 
-  filteredType:string=''
   ngOnInit(): void {
     this.blogItems = this.staticDataService.getAllResourcesData()
     this.staticDataService.setAllBlogData(this.blogItems);
     this.subCategoryList = this.getSubcategoryList()
     this.staticDataService.setFilterTabForBlog('All');
     this.breadcumDataService.changeData('All');
+    this.filteredType = 'All';
   }
-
-
 
   onFilteredValue(filteredType: string) {
     this.filteredType = filteredType;
@@ -96,7 +95,7 @@ export class ResourceComponent implements OnInit {
   }
 
   onReadMore(data: any) {
-    // this.staticDataService.setFilterTabForBlog('All')
+    this.staticDataService.setFilterTabForBlog('All')
     this.breadcumDataService.changeData(' ' + data.title);
     // this.router.navigate(['/design/blogs'])
   }
@@ -106,17 +105,21 @@ export class ResourceComponent implements OnInit {
   }
 
   searchResourcesData(data : any) {
-    if (this.searchResource === '') {
+    console.log(this.filteredType);
+    
+    if (this.searchResource == '') {
       this.blogItems = this.staticDataService.getAllBlogData();
-      // if (this.filteredType == "All") {
-      //   this.blogItems = this.staticDataService.getAllBlogData();
-      // }
-      // else {
-      //   this.blogItems = this.blogItems.filter(
-      //     (el: any) => el.category == this.filteredType
-      //   )
-      //   this.staticDataService.setFilteredData(this.blogItems);
-      // }
+      
+      if (this.filteredType == "All") {
+        this.blogItems = this.staticDataService.getAllBlogData();
+        console.log(this.blogItems);
+      }
+      else {
+        this.blogItems = this.blogItems.filter(
+          (el: any) => el.category == this.filteredType
+        )
+        this.staticDataService.setFilteredData(this.blogItems);
+      }
     } else {
       this.blogItems = this.blogItems.filter((item: any) =>
         item.title.toLowerCase().includes(this.searchResource.toLowerCase())
