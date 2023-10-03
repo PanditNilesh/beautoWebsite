@@ -1,71 +1,91 @@
-<div class="pl-140 pt-100 ">
-    <!-- <app-breadcrumb></app-breadcrumb> -->
+<div class="pl-140 pt-100">
+  <!-- <app-breadcrumb></app-breadcrumb> -->
 </div>
 
-<section class="tabinfo topPadding mb-5" *ngIf="searchData.length!=0">
-    <h1 class="fs-48 font-weight-bold mb-5"> Search <span class="fs-48 weight-100"> Results for "{{searchText}}" </span></h1>
-    <div class="tabinfo">
-        <div *ngFor="let sr of searchData">
-            <a href="javascript:void(0)" class="card details-box p-3" (click)="onNavigation(sr.pageUrl)">
-                <h5>{{sr.pageTitle}}</h5>
-                <p class="w-300 wrap-line">{{sr.description}}</p>
-            </a>
-            <hr class="text-primary my-4">
+<section class="tabinfo topPadding mb-5" *ngIf="searchData.length != 0">
+  <h1 class="fs-48 font-weight-bold mb-5">
+    Search
+    <span class="fs-48 weight-100"> Results for "{{ searchText }}" </span>
+  </h1>
+  <div class="tabinfo">
+    <div *ngFor="let sr of searchData">
+      <a
+        href="javascript:void(0)"
+        class="card details-box p-3"
+        (click)="onNavigation(sr.link)"
+      >
+        <h5>{{ sr.title }}</h5>
+        <div class="main-content">
+          <div>
+            <p class="w-300 wrap-line">{{ sr.desc }}</p>
+          </div>
+          <img src="{{ sr.pic }}" alt="{{ sr.title }}" class="search-img" />
         </div>
+      </a>
+      <hr class="text-primary my-4" />
     </div>
-
+  </div>
 </section>
 
-<section class="tabinfo topPadding mb-5" *ngIf="searchData.length==0">
-    <h1 class="fs-48 font-weight-bold mb-5"> No <span class="fs-48 weight-100"> Results for "Design" </span></h1>
-    <div class="tabinfo">
-        <div>
-            <div class="card details-box p-3">
-                <h5>Search tips</h5>
-                <ul>
-                    <li>Check your spelling and try again.</li>
-                    <li>Search for simpler, shorter terms.</li>
-                    <li>Search for something less specific.</li>
-                    <li>Try frequent searches listed below.</li>
-                    <li>Searching for a job? <span>Click here.</span> </li>
-                </ul>
-            </div>
-            <hr class="text-primary my-4">
-        </div>
-        <div>
-            <div class="card details-box p-3 mb-5">
-                <h5>Search tips</h5>
-                <ul>
-                    <li>Client Case Study</li>
-                    <li>Cloud</li>
-                    <li>Digital Transformation</li>
-                    <li>Data & Analytics</li>
-                    <li>Artificial Intelligence</li>
-                </ul>
-            </div>
-        </div>
+<section class="tabinfo topPadding mb-5" *ngIf="searchData.length == 0">
+  <h1 class="fs-48 font-weight-bold mb-5">
+    No <span class="fs-48 weight-100"> Results for "{{ searchText }}" </span>
+  </h1>
+  <div class="tabinfo">
+    <div>
+      <div class="card details-box p-3">
+        <h5>Search tips</h5>
+        <ul>
+          <li>Check your spelling and try again.</li>
+          <li>Search for simpler, shorter terms.</li>
+          <li>Search for something less specific.</li>
+          <li>Try frequent searches listed below.</li>
+          <li>Searching for a job? <span>Click here.</span></li>
+        </ul>
+      </div>
+      <hr class="text-primary my-4" />
     </div>
-
+    <div>
+      <div class="card details-box p-3 mb-5">
+        <h5>Search tips</h5>
+        <ul>
+          <li>Client Case Study</li>
+          <li>Cloud</li>
+          <li>Digital Transformation</li>
+          <li>Data & Analytics</li>
+          <li>Artificial Intelligence</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <div class="bg-light">
-    <div class="tabinfo pt-100 pb-100 case-studies-hover">
-        <div class="position-relative">
-            <h6 class="swiper_top title">{{title}}</h6>
-        </div>
-        <div>
-            <swiper id="case-study" [config]="swiperConfig" [spaceBetween]="50" [slidesPerGroup]="1"
-                [loopFillGroupWithBlank]="true" [navigation]="true" class="pt-85 mySwiper">
-                <ng-template swiperSlide *ngFor="let csi of ourWorksItems">
-                    <div class="case-box mb-3">
-                        <div class="img-container">
-                            <img src="{{csi.pic}}" class="img-fluid image" alt="">
-                            <!-- <div class="top-left-content">{{csi.category}} - {{csi.date}}</div> -->
-                            <div class="top-left-content">{{csi.category}}</div>
-                            <div class="perfect-center">
-                                <a href="{{csi.link}}" target="_blank" class="read-more">Read More</a>
-                                <!-- <div class="share">
+  <div class="tabinfo pt-100 pb-100 case-studies-hover">
+    <div class="position-relative">
+      <h6 class="swiper_top title">{{ title }}</h6>
+    </div>
+    <div>
+      <swiper
+        id="case-study"
+        [config]="swiperConfig"
+        [spaceBetween]="50"
+        [slidesPerGroup]="1"
+        [loopFillGroupWithBlank]="true"
+        [navigation]="true"
+        class="pt-85 mySwiper"
+      >
+        <ng-template swiperSlide *ngFor="let csi of ourWorksItems">
+          <div class="case-box mb-3">
+            <div class="img-container">
+              <img src="{{ csi.pic }}" class="img-fluid image" alt="" />
+              <!-- <div class="top-left-content">{{csi.category}} - {{csi.date}}</div> -->
+              <div class="top-left-content">{{ csi.category }}</div>
+              <div class="perfect-center">
+                <a href="{{ csi.link }}" target="_blank" class="read-more"
+                  >Read More</a
+                >
+                <!-- <div class="share">
                                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1226_25059)">
@@ -94,22 +114,28 @@
                                         </defs>
                                     </svg>
                                 </div> -->
-                            </div>
-                        </div>
-                        <div class="text-inner mh-200">
-                            <h4 class="text-ellipsis pt-4 pl-2 ">{{csi.title}}</h4>
-                            <p class="text-ellipsis-multiline description">{{csi.desc}}</p>
-                        </div>
-                    </div>
-                </ng-template>
-            </swiper>
-        </div>
-        <div class="d-flex">
-            <a class="arrow_animation d-inline-flex text-primary w-500 all-case-studies" routerLink="/all-products">See all
-                work
-                <img src="assets/media/icons/Arrow-Link.svg" class="arrow_anim opacity-6" alt="">
-                <!-- <img src="assets/media/icons/Arrow.gif" class="arrow-anim icon_hover" alt=""> -->
-            </a>
-        </div>
+              </div>
+            </div>
+            <div class="text-inner mh-200">
+              <h4 class="text-ellipsis pt-4 pl-2">{{ csi.title }}</h4>
+              <p class="text-ellipsis-multiline description">{{ csi.desc }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
     </div>
+    <div class="d-flex">
+      <a
+        class="arrow_animation d-inline-flex text-primary w-500 all-case-studies"
+        routerLink="/all-products"
+        >See all work
+        <img
+          src="assets/media/icons/Arrow-Link.svg"
+          class="arrow_anim opacity-6"
+          alt=""
+        />
+        <!-- <img src="assets/media/icons/Arrow.gif" class="arrow-anim icon_hover" alt=""> -->
+      </a>
+    </div>
+  </div>
 </div>
