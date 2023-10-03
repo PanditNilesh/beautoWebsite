@@ -153,6 +153,9 @@ const routes: Routes = [
   },
   {
     path : 'resources',
+    data: {
+      breadcrumb: 'Resources'
+    },
     component: ResourceComponent
   }
 ];
