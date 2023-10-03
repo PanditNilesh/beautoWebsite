@@ -38,7 +38,7 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
 
     this.breadcumDataService.breadcumClasss.subscribe(res =>{
       this.stepColorchange= res;
-    })
+    });
   }
 
   private createBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: MenuItem[] = [ ]): any {

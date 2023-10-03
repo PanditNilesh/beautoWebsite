@@ -55,13 +55,6 @@ const routes: Routes = [
     data: {
       breadcrumb: 'All Projects'
     },
-    component:AllProductsComponent
-  },
-  {
-    path: 'all-projects',
-    data: {
-      breadcrumb: 'All Projects'
-    },
     loadChildren: () => import('./modules/all-work/all-work.module').then(m => m.AllWorkModule)
   },
   {

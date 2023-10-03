@@ -38,7 +38,8 @@
               "src/assets/scss/origin.scss",
             
               "node_modules/wowjs/css/libs/animate.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/cookieconsent/build/cookieconsent.min.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -47,7 +48,8 @@
             },
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
-              "node_modules/wowjs/dist/wow.js"
+              "node_modules/wowjs/dist/wow.js",
+              "node_modules/cookieconsent/build/cookieconsent.min.js"
             ]
           },
           "configurations": {
@@ -114,12 +116,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/cookieconsent/build/cookieconsent.min.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/cookieconsent/build/cookieconsent.min.js"
-            ]
+            "scripts": []
           }
         }
       }

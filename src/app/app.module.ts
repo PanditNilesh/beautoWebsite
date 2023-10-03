@@ -16,8 +16,24 @@ import { SubmitideaComponent } from './modules/submitidea/submitidea.component';
 import { NgwWowModule } from 'ngx-wow';
 import { BuildyourteamComponent } from './modules/buildyourteam/buildyourteam.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+import { CookieService } from 'ngx-cookie-service';
 
+const cookieConfig: NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'localhost' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+  },
+  palette: {
+    popup: {
+      background: '#000'
+    },
+    button: {
+      background: '#f1d600'
+    }
+  },
+  theme: 'edgeless',
+  type: 'opt-out'
+};
 
 @NgModule({
   declarations: [
@@ -36,12 +52,13 @@ import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent'
     BrowserAnimationsModule,
     NgwWowModule,
     DragDropModule,
+    NgcCookieConsentModule.forRoot(cookieConfig)
     // NgcCookieConsentModule,
     // NgcCookieConsentConfig
-    
+
   ],
 
-  providers: [StaticDataService, BreadcumDataService],
+  providers: [StaticDataService, BreadcumDataService, CookieService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
