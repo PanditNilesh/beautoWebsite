@@ -22,11 +22,9 @@ export class AllWorkStudyTemplateComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     this.newOurWorkItems = [];
     this.ourWorkItems.forEach((element: any) => {
-      // if(element.subcategory == "Products"){
       this.newOurWorkItems.push(element);
       this.caseStudyAllItems = this.ourWorkItems;
       this.staticDataService.setAllCaseStudyData(this.ourWorkItems);
-      // }
     });
   }
 
@@ -36,15 +34,11 @@ export class AllWorkStudyTemplateComponent implements OnInit {
   }
 
   onFilteredValue(filteredType: string) {
-    console.log(filteredType);
-
     this.ourWorkItems = this.staticDataService.getAllCaseStudyData();
-
     this.selectedItem.emit(filteredType);
+
     if (filteredType == "All") {
-
       this.ourWorkItems = this.staticDataService.getAllCaseStudyData();
-
       this.staticDataService.setFilteredData(this.ourWorkItems)
     }
     else {
@@ -56,33 +50,33 @@ export class AllWorkStudyTemplateComponent implements OnInit {
   }
 
   onSortBy(sortType: string) {
-    // this.ourWorkItems = this.staticDataService.getFilteredData();
-
+    this.ourWorkItems = this.staticDataService.getFilteredData();
+ 
     switch (sortType) {
       // case "newly-added":this.ourWorkItems=this.staticDataService.getFilteredData(); break;
       // case "oldest_ones":this.ourWorkItems=this.staticDataService.getFilteredData(); break;
-      case "newly-added": this.ourWorkItems = this.ourWorkItems.sort(
+      case "newly-added": this.newOurWorkItems = this.newOurWorkItems.sort(
         (a: any, b: any) => (a.id > b.id ? 1 : -1)
       ); break;
-      case "oldest_ones": this.ourWorkItems = this.ourWorkItems.sort(
+      case "oldest_ones": this.newOurWorkItems = this.newOurWorkItems.sort(
         (a: any, b: any) => (a.id < b.id ? 1 : -1)
       ); break;
-      case "sort_by_A-Z": if (this.ourWorkItems.length > 1) {
-        this.ourWorkItems = this.ourWorkItems.sort(
+      case "sort_by_A-Z": if (this.newOurWorkItems.length > 1) {
+        this.newOurWorkItems = this.newOurWorkItems.sort(
           (a: any, b: any) => (a.title[0] > b.title[0] ? 1 : -1)
         );
       } else {
-        this.ourWorkItems = this.ourWorkItems;
+        this.newOurWorkItems = this.newOurWorkItems;
       }
         break;
-      case "sort_by_Z-A": if (this.ourWorkItems.length > 1) {
-        this.ourWorkItems = this.ourWorkItems.sort(
+      case "sort_by_Z-A": if (this.newOurWorkItems.length > 1) {
+        this.newOurWorkItems = this.newOurWorkItems.sort(
           (a: any, b: any) => (a.title[0] > b.title[0] ? -1 : 1)
         );
       } else {
-        this.ourWorkItems = this.ourWorkItems;
+        this.newOurWorkItems = this.newOurWorkItems;
       } break;
-      case "default": this.ourWorkItems; break;
+      case "default": this.newOurWorkItems; break;
     }
   }
 

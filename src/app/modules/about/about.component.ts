@@ -100,8 +100,7 @@ export class AboutComponent implements OnInit, OnChanges {
     this.caseStudyItems = [];
     this.caseStudyItems = this.staticDataService.getCaseStudyData("");
     this.ourWorksItems = [];
-    this.ourWorksItems = this.staticDataService.getOurWorkData('','');
-    console.log(this.ourWorksItems);
+    this.ourWorksItems = this.staticDataService.getOurWorkData('','Products');
     
     this.breadcumDataService.setclass('');
     this.staticDataService.getIncomingPage().subscribe(page => {
