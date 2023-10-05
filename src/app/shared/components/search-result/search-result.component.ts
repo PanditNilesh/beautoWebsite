@@ -99,7 +99,7 @@ export class SearchResultComponent implements OnInit {
   ngOnInit(): void {
     this.title = "Our Work";
     this.ourWorksItems = [];
-    this.ourWorksItems = this.staticDataService.getOurWorkData('')
+    this.ourWorksItems = this.staticDataService.getOurWorkData('','Products')
 
 
     this.filteredDataService.currentSearchText.subscribe(
