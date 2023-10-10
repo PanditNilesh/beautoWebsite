@@ -109,7 +109,7 @@ export class SearchResultComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData, ...this.ResorucesData.ResorucesData,...this.openingsData.opening];
+    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData, ...this.ResorucesData.ResorucesData];
 
     this.title = "Our Work";
     this.ourWorksItems = [];
