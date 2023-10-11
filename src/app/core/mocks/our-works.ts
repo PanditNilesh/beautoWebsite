@@ -470,7 +470,7 @@ export class OurWorks {
       desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
       category: "Mechanical",
       subcategory: "Projects",
-      link: "assets/media/pdf/Our-Work/Mechanical/Projects/Bottle leak testing machine (1).pdf"
+      link: "assets/media/pdf/Our-Work/Mechanical/Projects/Bottle_leak_testing_machine.pdf"
     },
     // {
     //     id: "8",

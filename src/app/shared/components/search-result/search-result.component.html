@@ -2,7 +2,7 @@
   <!-- <app-breadcrumb></app-breadcrumb> -->
 </div>
 
-<section class="tabinfo topPadding mb-5" *ngIf="searchData.length != 0">
+<section class="tabinfo topPadding mb-5" *ngIf="searchData.length != 0 && searchText !== '' ">
   <h1 class="fs-48 font-weight-bold mb-5">
     Search
     <span class="fs-48 weight-100"> Results for "{{ searchText }}" </span>
@@ -10,9 +10,8 @@
   <div class="tabinfo">
     <div *ngFor="let sr of searchData">
       <a
-        href="javascript:void(0)"
         class="card details-box p-3"
-        (click)="onNavigation(sr.link)"
+        (click)="onNavigation(sr)"
       >
         <h5>{{ sr.title }}</h5>
         <div class="main-content">
@@ -27,7 +26,7 @@
   </div>
 </section>
 
-<section class="tabinfo topPadding mb-5" *ngIf="searchData.length == 0">
+<section class="tabinfo topPadding mb-5" *ngIf="searchData.length == 0 || searchText == '' ">
   <h1 class="fs-48 font-weight-bold mb-5">
     No <span class="fs-48 weight-100"> Results for "{{ searchText }}" </span>
   </h1>
@@ -75,7 +74,7 @@
         [navigation]="true"
         class="pt-85 mySwiper"
       >
-        <ng-template swiperSlide *ngFor="let csi of ourWorksItems">
+        <ng-template swiperSlide *ngFor="let csi of allData">
           <div class="case-box mb-3">
             <div class="img-container">
               <img src="{{ csi.pic }}" class="img-fluid image" alt="" />

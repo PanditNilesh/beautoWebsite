@@ -5,6 +5,13 @@ import { HttpService } from '../../services/http.service';
 import { StaticDataService } from '../../services/static-data.service';
 import { FilteredDataService } from '../../services/filtered-data.service';
 import { Router } from '@angular/router';
+import { OurWorks } from 'src/app/core/mocks/our-works';
+import { Blogs } from 'src/app/core/mocks/blogs';
+import { Services } from 'src/app/core/mocks/services';
+import { CaseStudy } from 'src/app/core/mocks/case-study';
+import { Resources } from 'src/app/core/mocks/resources';
+import { BreadcumDataService } from '../../services/breadcum-data.service';
+import { Position } from 'src/app/core/mocks/hiring';
 
 @Component({
   selector: 'app-search-result',
@@ -14,9 +21,8 @@ import { Router } from '@angular/router';
 export class SearchResultComponent implements OnInit {
   title!: string;
   ourWorksItems: any;
-  searchData: any;
-
-
+  searchData: any
+  allData: any;
   result: any = [
     {
       "id": 1,
@@ -91,16 +97,23 @@ export class SearchResultComponent implements OnInit {
       "description": "Beverage Dispenser MachineAGV 1000QUBAYUAHARAOther productsOur Subsidiaries\nServices\nOur Work\nWe're Hiring\nCollaborate\nkeyboard_arrow_downOur Subsidiaries\nServices\nOur Work\nWe're Hiring\nCollaborate\nkeyboard_arrow_downOur SubsidiariesOur SubsidiariesOur SubsidiariesServices\nOur Work\nWe're Hiring\nCollaborate\nkeyboard_arrow_downServices\nOur Work\nWe're HiringServicesServicesOur WorkOur WorkWe're HiringWe're HiringCollaborate\nkeyboard_arrow_downCollaborate\nkeyboard_arrow_downAbout Us\n\nOur Team\n\nDesign\n\nSoftware\n\nMechanical\n\nElectronicsAbout UsOur TeamDesignSoftwareMechanicalElectronicsGalleryHome\nDesign / Our Work - Product / AyuAYU\nOverviewTech Specs\nAYU,\nkeeps you safe!\nUnderstand more \nWe have brought Ayu, the range of automatic\nhand sanitizer & soap dispenser.\nLiquid\nGel\nFeatures\nContactless operating\nVariable volume dispensing\nAuto stop\nManual override\nLevel indication\nLED indication\nPremium product\nMake your life safer and add beauty to your walls with AYU.\nAdd ons\nTable top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nFloor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nWall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nOther products\nDesign\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.\n\nDesign\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.\n\nDesign\nRead More\nQUB\n\nSmart home automation system product.\n\nDesign\nRead More\nAYU\n\nPremium packaging for smart automation product.\n\nDesign\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.\n\nSee all workAYU\nOverviewTech SpecsAYU\nOverviewTech SpecsAYUOverviewTech SpecsAYU,\nkeeps you safe!\nUnderstand more \nWe have brought Ayu, the range of automatic\nhand sanitizer & soap dispenser.\nLiquid\nGel\nFeatures\nContactless operating\nVariable volume dispensing\nAuto stop\nManual override\nLevel indication\nLED indication\nPremium product\nMake your life safer and add beauty to your walls with AYU.\nAdd ons\nTable top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nFloor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nWall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nOther products\nDesign\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.\n\nDesign\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.\n\nDesign\nRead More\nQUB\n\nSmart home automation system product.\n\nDesign\nRead More\nAYU\n\nPremium packaging for smart automation product.\n\nDesign\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.\n\nSee all workAYU,\nkeeps you safe!\nUnderstand more AYU,keeps you safe!Understand more We have brought Ayu, the range of automatic\nhand sanitizer & soap dispenser.\nLiquid\nGelWe have brought Ayu, the range of automatic\nhand sanitizer & soap dispenser.\nLiquid\nGelWe have brought Ayu, the range of automatic\nhand sanitizer & soap dispenser.\nLiquid\nGelWe have brought Ayu, the range of automatic\nhand sanitizer & soap dispenser.Liquid\nGelLiquidLiquidGelGelFeatures\nContactless operating\nVariable volume dispensing\nAuto stop\nManual override\nLevel indication\nLED indicationFeaturesContactless operating\nVariable volume dispensing\nAuto stop\nManual override\nLevel indication\nLED indicationContactless operatingContactless operatingContactless operatingVariable volume dispensingVariable volume dispensingVariable volume dispensingAuto stopAuto stopAuto stopManual overrideManual overrideManual overrideLevel indicationLevel indicationLevel indicationLED indicationLED indicationLED indicationPremium product\nMake your life safer and add beauty to your walls with AYU.Premium productMake your life safer and add beauty to your walls with AYU.Add ons\nTable top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nFloor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.\nWall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Add onsTable top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Table top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Table top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Table top stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Table top standBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Floor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Floor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Floor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Floor stand\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Floor standBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Wall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Wall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Wall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Wall mounting plate\nBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Wall mounting plateBirch is a hardwood that is extremely strong and durable. A beautiful appearance, with a fine grain and pale colouring which gives it an elegant look for clean line interior product designs.Other products\nDesign\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.\n\nDesign\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.\n\nDesign\nRead More\nQUB\n\nSmart home automation system product.\n\nDesign\nRead More\nAYU\n\nPremium packaging for smart automation product.\n\nDesign\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.\n\nSee all workOther products\nDesign\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.\n\nDesign\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.\n\nDesign\nRead More\nQUB\n\nSmart home automation system product.\n\nDesign\nRead More\nAYU\n\nPremium packaging for smart automation product.\n\nDesign\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.\n\nSee all workOther productsDesign\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.\n\nDesign\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.\n\nDesign\nRead More\nQUB\n\nSmart home automation system product.\n\nDesign\nRead More\nAYU\n\nPremium packaging for smart automation product.\n\nDesign\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.Design\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.\n\nDesign\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.\n\nDesign\nRead More\nQUB\n\nSmart home automation system product.\n\nDesign\nRead More\nAYU\n\nPremium packaging for smart automation product.\n\nDesign\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.Design\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.Design\nRead More\nBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.Design\nRead MoreDesignRead MoreBeverage Dispenser Machine\n\nFresh cold beverages making and dispensing unit.Design\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.Design\nRead More\nAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.Design\nRead MoreDesignRead MoreAGV 1000\n\nAutomatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.Design\nRead More\nQUB\n\nSmart home automation system product.Design\nRead More\nQUB\n\nSmart home automation system product.Design\nRead MoreDesignRead MoreQUB\n\nSmart home automation system product.Design\nRead More\nAYU\n\nPremium packaging for smart automation product.Design\nRead More\nAYU\n\nPremium packaging for smart automation product.Design\nRead MoreDesignRead MoreAYU\n\nPremium packaging for smart automation product.Design\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.Design\nRead More\nAHARA\n\nFresh food & liquid dispensing machine.Design\nRead MoreDesignRead MoreAHARA\n\nFresh food & liquid dispensing machine.See all workQuick Links\nAbout Us\nAll Work\nCertificates\nCase Studies\nNews\nGallery\nLocations\nSoftware & Design -\nPride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045\nMechatronics -\nSUSHIL, SNO 29, Near Suvidha Angan, Narhe, Pune, Maharashtra, India - 411041\nContact us\n(+91) 895 6031 197\n(+91) 833 7660 046\nsales@beautosys.com\nSocial MediaQuick Links\nAbout Us\nAll Work\nCertificates\nCase Studies\nNews\nGallery\nLocations\nSoftware & Design -\nPride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045\nMechatronics -\nSUSHIL, SNO 29, Near Suvidha Angan, Narhe, Pune, Maharashtra, India - 411041\nContact us\n(+91) 895 6031 197\n(+91) 833 7660 046\nsales@beautosys.com\nSocial MediaQuick Links\nAbout Us\nAll Work\nCertificates\nCase Studies\nNews\nGalleryQuick LinksLocations\nSoftware & Design -\nPride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045\nMechatronics -\nSUSHIL, SNO 29, Near Suvidha Angan, Narhe, Pune, Maharashtra, India - 411041LocationsSoftware & Design -\nPride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045\nMechatronics -\nSUSHIL, SNO 29, Near Suvidha Angan, Narhe, Pune, Maharashtra, India - 411041Software & Design -\nPride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045Software & Design -\nPride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045Mechatronics -\nSUSHIL, SNO 29, Near Suvidha Angan, Narhe, Pune, Maharashtra, India - 411041Mechatronics -\nSUSHIL, SNO 29, Near Suvidha Angan, Narhe, Pune, Maharashtra, India - 411041Contact us\n(+91) 895 6031 197\n(+91) 833 7660 046\nsales@beautosys.com\nSocial MediaContact us(+91) 895 6031 197\n(+91) 833 7660 046\nsales@beautosys.com(+91) 895 6031 197\n(+91) 833 7660 046\nsales@beautosys.com(+91) 895 6031 197(+91) 833 7660 046sales@beautosys.comSocial MediaSocial Media© 2023 Copyright: All rights reserved Beauto Systems Pvt. Ltd\n\nPrivacy Policy\n\nTerms of Use© 2023 Copyright: All rights reserved Beauto Systems Pvt. LtdPrivacy Policy\n\nTerms of UseCollaborate/ Ayu/ Software & Design -Mechatronics -About UsOur TeamDesignSoftwareMechanicalElectronicsGalleryFresh cold beverages making and dispensing unit.Automatic guided vehicle: It is a smart machine which has features like automatic path following, 1 to 2 ton payload capacity.Smart home automation system product.Premium packaging for smart automation product.Fresh food & liquid dispensing machine.Privacy PolicyTerms of Use"
     }
   ];
-
+  allWork = new OurWorks();
+  blogsData = new Blogs();
+  servicesData = new Services();
+  caseStudyData = new CaseStudy();
+  ResorucesData = new Resources();
+  openingsData = new Position() 
   searchText: string = '';
-  allData : string = ''
-  constructor(private router: Router, private httpService: HttpService, private staticDataService: StaticDataService, private filteredDataService: FilteredDataService) { }
+  constructor(private router: Router, private httpService: HttpService, private staticDataService: StaticDataService, private filteredDataService: FilteredDataService, private breadcumDataService: BreadcumDataService) { }
+
 
   ngOnInit(): void {
+    
+    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData, ...this.ResorucesData.ResorucesData];
+
     this.title = "Our Work";
     this.ourWorksItems = [];
-    this.ourWorksItems = this.staticDataService.getOurWorkData('','Products')
-
+    this.ourWorksItems = this.staticDataService.getOurWorkData('', 'Products');
 
     this.filteredDataService.currentSearchText.subscribe(
       data => {
@@ -137,11 +150,10 @@ export class SearchResultComponent implements OnInit {
       description: searchText
     }
     this.searchData = [];
-    this.searchData = this.ourWorksItems.filter((item: any) =>
+    this.searchData = this.allData.filter((item: any) =>
       item.title.toLowerCase().includes(searchText.toLowerCase())
     );
-    console.log(this.searchData);
-    
+
     // this.httpService.post(environment.apiUrl + Urls.API_ENDPOINT.serach, data).subscribe(
     //   response => {
     //     console.log(response)
@@ -154,9 +166,23 @@ export class SearchResultComponent implements OnInit {
     // )
   }
 
-  onNavigation(link: string) {
-    let routeText = link.replace('http://www.beautosystems.com:8080', '');
-    this.router.navigate([routeText]);
+  onNavigation(link: any) {
+    let blogTitle = link.title;
+    let openPDF = false; 
+    let allData =[...this.blogsData.blogData,...this.caseStudyData.caseStudyData]
+    allData.forEach((res: any) => {
+      if (res.title === blogTitle) {
+        this.router.navigate(['/design/blogs']);
+        this.breadcumDataService.changeData(' ' + res.title);
+        this.staticDataService.setBlog(res);
+        openPDF = true;
+      }
+    });
+  
+    if (!openPDF) {
+      window.open(link.link);
+    }
   }
+  
 
 }
