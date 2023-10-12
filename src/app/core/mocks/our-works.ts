@@ -3,7 +3,7 @@ export class OurWorks {
     {
       id: "1",
       title: "Beverage Dispenser Machine",
-      pic: "assets/media/images/design/design-our-works-2.png",
+      pic: "assets/media/images/design/beve-machine-01.jpg  ",
       desc: "Fresh cold beverages making and dispensing unit.",
       category: "Design",
       subcategory: "Products",
@@ -30,7 +30,7 @@ export class OurWorks {
     {
       id: "4",
       title: "Flowla",
-      pic: "assets/media/images/design/design-our-works-6.png",
+      pic: "assets/media/images/design/Flowla-02.jpg",
       desc: "Floral series has well crafted wooden lamps that illuminates your houses with warm and positive light",
       category: "Design",
       subcategory: "Products",
@@ -45,15 +45,15 @@ export class OurWorks {
       subcategory: "Products",
       link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
     },
-    {
-      id: "6",
-      title: "Desk organiser",
-      pic: "assets/media/images/design/design-our-works-6.png",
-      desc: "LOGO design and digital brand marketing and advertizing.",
-      category: "Design",
-      subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
-    },
+    // {
+    //   id: "6",
+    //   title: "Desk organiser",
+    //   pic: "assets/media/images/design/design-our-works-6.png",
+    //   desc: "LOGO design and digital brand marketing and advertizing.",
+    //   category: "Design",
+    //   subcategory: "Products",
+    //   link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
+    // },
     // {
     //   title: "Planter",
     //   pic: "assets/media/images/design/design-our-works-7.png",
@@ -209,8 +209,8 @@ export class OurWorks {
     // },
     {
       id: "7",
-      title: "AGV 1000",
-      pic: "assets/media/images/mechanical/mechanical-our-works-1.png",
+      title: "Swig",
+      pic: "assets/media/images/mechanical/Swing-03.jpg",
       desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
       category: "Mechanical",
       subcategory: "Products",

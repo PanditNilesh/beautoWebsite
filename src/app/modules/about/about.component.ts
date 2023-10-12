@@ -90,7 +90,7 @@ export class AboutComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
 
-    this.title = "Our Work";
+    this.title = "Our Products";
 
     this.breadcumDataService.changeData('');
     let data_about = new about();
