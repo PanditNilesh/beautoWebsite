@@ -7,8 +7,8 @@
 export const environment = {
   production: false,
   // enquiry: Base_Url + 'enquiry',
-  // apiUrl: 'http://192.168.0.113:8080/website'
-  apiUrl: 'https://www.beautosystems.com/website'
+  apiUrl: 'http://192.168.0.113:8080/website'
+  // apiUrl: 'https://www.beautosystems.com/website'
 };
 
 /*

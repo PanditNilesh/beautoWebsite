@@ -31,4 +31,8 @@ export class PhotographyComponent implements OnInit {
   connect() {
     this.connectClicked = true;
   }
+
+  connectCloseClicked(event: boolean) {
+    this.connectClicked = event;
+  }
 }

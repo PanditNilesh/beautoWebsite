@@ -28,7 +28,7 @@ const cookieConfig: NgcCookieConsentConfig = {
       background: '#000'
     },
     button: {
-      background: '#f1d600'
+      background: '#007aff'
     }
   },
   theme: 'edgeless',
@@ -57,8 +57,16 @@ const cookieConfig: NgcCookieConsentConfig = {
     // NgcCookieConsentConfig
 
   ],
-
-  providers: [StaticDataService, BreadcumDataService, CookieService],
+  providers: [
+    StaticDataService,
+    BreadcumDataService,
+    CookieService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true
+    }
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

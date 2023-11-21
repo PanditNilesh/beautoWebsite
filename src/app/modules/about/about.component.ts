@@ -23,7 +23,13 @@ export class AboutComponent implements OnInit, OnChanges {
   ]
 
 
+  
   stones = [
+    {
+      pic: "assets/media/images/about/6-anniversary.jpg",
+      year: "2023 Successful 6th Anniversary celebration and SWING entered into the market.",
+      desc: "Successfully celebrated 6th anniversary and expanding our horizons into the global world.Launched first industrial AGV - 'SWING' into market. Swing revolutionizes industrial automation by seamlessly integrating advanced robotics with intelligent navigation systems.Swing effortlessly transports goods and materials within various industries."
+    },
     {
       pic: "assets/media/images/about/5-anniversary.webp",
       year: "2022 Successful 5th Anniversary celebration",

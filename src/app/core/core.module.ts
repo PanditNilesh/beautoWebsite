@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatMenuModule } from '@angular/material/menu';
     RouterModule,
     MatIconModule,
     MatMenuModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTooltipModule
   ],
   exports:[
     FormsModule,

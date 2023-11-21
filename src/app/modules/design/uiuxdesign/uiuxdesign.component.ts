@@ -32,4 +32,8 @@ export class UiuxdesignComponent implements OnInit {
   connect() {
     this.connectClicked = true;
   }
+
+  connectCloseClicked(event: boolean) {
+    this.connectClicked = event;
+  }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Designation } from 'src/app/core/mocks/designations';
+import { Domain } from 'src/app/core/mocks/designations';
+import { Location } from 'src/app/core/mocks/designations';
 import { Position } from 'src/app/core/mocks/hiring';
 import { BreadcumDataService } from 'src/app/shared/services/breadcum-data.service';
 import { FilteredDataService } from 'src/app/shared/services/filtered-data.service';
@@ -13,13 +16,14 @@ export class HiringComponent implements OnInit {
   open_hiring: any;
   hiringItems: any;
   sortItem: string = 'Default';
-  location: any = ['All'];
-  domain: any = ['All'];
-  designation: any = ['All'];
+  location: any = new Location().locations;
+  domain: any = new Domain().domains;
+  designation: any = new Designation().designations;
   selectedLocation = 'All';
   selectedDomain = 'All';
   selectedDesignation = 'All';
   filteredOpening: any = [];
+  searchText:string='';
   constructor(private breadcumDataService: BreadcumDataService, private filteredDataService: FilteredDataService, private staticDataService: StaticDataService) {
     this.getAllData();
   }
@@ -30,9 +34,9 @@ export class HiringComponent implements OnInit {
     this.open_hiring = hiring.opening;
     this.filteredOpening = hiring.opening;
     for (let i in hiring.opening) {
-      this.location.push(hiring.opening[i].location);
-      this.domain.push(hiring.opening[i].position);
-      this.designation.push(hiring.opening[i].name)
+      // this.location.push(hiring.opening[i].location);
+      // this.domain.push(hiring.opening[i].position);
+      // this.designation.push(hiring.opening[i].name)
     }
     this.location = this.location.filter((item: any, index: any) => this.location.indexOf(item) === index);
     this.domain = this.domain.filter((item: any, index: any) => this.domain.indexOf(item) === index);
@@ -71,6 +75,7 @@ export class HiringComponent implements OnInit {
   }
 
   onKeyPress(event: any) {
+    this.searchText = event.target.value;
     let data = this.open_hiring;
     const filterValue = event.target.value.toLowerCase();
     if (data != undefined && filterValue != '') {
@@ -82,6 +87,7 @@ export class HiringComponent implements OnInit {
   }
 
   onLocation(location: string) {
+    this.searchText = location;
     this.selectedLocation = location;
     this.selectedDomain = 'All';
     this.selectedDesignation = 'All';
@@ -97,6 +103,7 @@ export class HiringComponent implements OnInit {
   }
 
   onDomain(domain: string) {
+    this.searchText = domain;
     this.selectedDomain = domain;
     this.selectedDesignation = 'All';
     if (domain == 'All')
@@ -113,6 +120,7 @@ export class HiringComponent implements OnInit {
   }
 
   onDesignation(designation: string) {
+    this.searchText = designation;
     this.selectedDesignation = designation;
     if (designation == 'All')
       this.filteredOpening = this.open_hiring.filter((data: any) => (data.position.toLowerCase().includes(this.selectedDomain.toLowerCase()) && data.location.toLowerCase().includes(this.selectedLocation.toLowerCase())));

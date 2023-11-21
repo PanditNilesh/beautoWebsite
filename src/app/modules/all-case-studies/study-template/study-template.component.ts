@@ -76,8 +76,7 @@ export class StudyTemplateComponent implements OnInit, OnChanges {
     this.staticDataService.getAllCaseStudyData();
     this.breadcumDataService.changeData(' '+data.title);
     this.staticDataService.setCaseStude(data);
-    this.router.navigate(['/all-case-studies/casestudy-details']);
-    
+    this.router.navigate(['/all-case-studies/casestudy-details']); 
   }
 
 }

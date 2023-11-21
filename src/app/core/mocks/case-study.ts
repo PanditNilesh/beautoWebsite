@@ -89,6 +89,45 @@ export class CaseStudy {
       }
     },
     {
+      title: "Smart Pole",
+      pic: "assets/media/images/design/smart pole.jpg",
+      desc: "A Pole that incorporates EV,Screen,Speaker,Mosquito trapper,Camera and Street lamp for Smart City and spaces",
+      category: "Software",
+      subcategory: 'Product',
+      date: "Feb 2023", 
+      link: "https://www.behance.net/gallery/172793597/SMART-POLE",
+      readTime: "10 min. read",
+      brief: {
+        title: "Brief",
+        desc: "Robotic Process Automation (RPA) is being increasingly adopted by companies across various industries to streamline and automate their processes, and Beauto Systems is no exception. In the fintech industry, payment gateway companies face numerous challenges in processing transactions involving multiple mobile wallet companies across the African continent. One of the key challenges is the need to process reversal requests raised by customers for various reasons, such as wrong amount, wrong receiving person, or accidental transaction. These requests can be difficult to process using traditional methods, as they involve a large number of different sending and receiving partner companies."
+      },
+      challenges: {
+        title: "Solution",
+        points: [
+          "To address this challenge, our client, one of the largest payment gateway companies in the African continent, created a predefined roadmap for the automation of the reversal process. The roadmap identified several key steps that needed to be automated, including identifying and categorising reversal requests, structuring the reversal tickets, extracting necessary information from the tickets, and automating actions to be taken in case of human delays in handling manual stages.",
+          "At Beauto Systems, we leveraged our expertise in Natural Language Programming and fundamental Java code to implement the automation roadmap. This allowed us to reduce the cost of using paid tools for RPA to the maximum possible extent. We also created a simple and highly interactive UI at a rapid pace to monitor and control the entire reversal process and deployed the entire system on the client's on-premise server.",
+          "The automation of the reversal process has led to significant improvements in efficiency and cost savings for our client. It has also enabled the company to handle a large volume of reversal requests in a more streamlined and efficient manner.",
+          "In addition to our expertise in RPA implementation, Beauto Systems also offers technical consulting services to help companies identify pain points and develop a roadmap for automation. We believe that by leveraging the power of RPA, companies can not only achieve significant cost savings but also improve their overall business efficiency."
+        ]
+      },
+      solution: {
+        title: "",
+        points: [
+          
+        ]
+      },
+      result: {
+        title: "",
+        points: [
+        
+        ]
+      },
+      video: {
+        link: 'assets/media/images/case-studies/software/soft_1.jpg',
+        src: 'source : https://www.linkedin.com/pulse/streamlining-complex-processes-fintech-using-robotic-process-soma-g%3FtrackingId=S7jsGc%252BvShYyNjKCm11law%253D%253D/?trackingId=S7jsGc%2BvShYyNjKCm11law%3D%3D'
+      }
+    },
+    {
       title: "Tea Dispenser Machine",
       pic: "assets/media/images/case-studies/home/2.png",
       desc: "Design and developing a convenient dispensing unit to serve hygienic brewed tea through F5 branded retail shops & offices in metro cities.",
