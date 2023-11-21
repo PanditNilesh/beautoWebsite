@@ -43,7 +43,7 @@ export class OurWorks {
       desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
       category: "Design",
       subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
+      link: "assets/media/pdf/Our-Work/Design/Product/Swing.pdf"
     },
     // {
     //   id: "6",
@@ -207,15 +207,6 @@ export class OurWorks {
     //   subcategory: "Photography",
     //   link: "/new/comingSoon"
     // },
-    {
-      id: "7",
-      title: "Swig",
-      pic: "assets/media/images/mechanical/Swing-03.jpg",
-      desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
-      category: "Mechanical",
-      subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Mechanical/Products/AGV PPT.pdf"
-    },
     {
       id: "8",
       title: "IIoTConnx - SaaS Application",
