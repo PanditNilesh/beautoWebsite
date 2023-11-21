@@ -2,17 +2,17 @@
   <!-- <app-breadcrumb></app-breadcrumb> -->
 </div>
 
-<section class="tabinfo topPadding mb-5" *ngIf="searchData.length != 0 && searchText !== '' ">
+<section
+  class="tabinfo topPadding mb-5"
+  *ngIf="searchData.length != 0 && searchText !== ''"
+>
   <h1 class="fs-48 font-weight-bold mb-5">
     Search
     <span class="fs-48 weight-100"> Results for "{{ searchText }}" </span>
   </h1>
   <div class="tabinfo">
     <div *ngFor="let sr of searchData">
-      <a
-        class="card details-box p-3"
-        (click)="onNavigation(sr)"
-      >
+      <a class="card details-box p-3" (click)="onNavigation(sr)">
         <h5>{{ sr.title }}</h5>
         <div class="main-content">
           <div>
@@ -23,10 +23,128 @@
       </a>
       <hr class="text-primary my-4" />
     </div>
+     <div
+          class="col-md-6"
+          *ngFor="let team of filteredOpening; let i = index"
+        >
+          <div class="hirinCard">
+            <div class="hirejobtitle">{{ team.name }}</div>
+            <div class="position">{{ team.position }}</div>
+            <div class="icontext">
+              <div>
+                <img
+                  src="assets/media/icons/hiring/hiring-1.svg"
+                  class="hiringImg"
+                  alt=""
+                />
+                {{ team.experience }}
+              </div>
+              <div>
+                <img
+                  src="assets/media/icons/hiring/hiring-2.svg"
+                  alt=""
+                  class="hiringImg"
+                />
+                {{ team.role }}
+              </div>
+              <div>
+                <img
+                  src="assets/media/icons/hiring/hiring-3.svg"
+                  alt=""
+                  class="hiringImg"
+                />
+                {{ team.package }}
+              </div>
+            </div>
+            <div class="dec">
+              {{ team.sortdiscription }}
+            </div>
+            <div class="listBtn">
+              <div class="list">
+                <ul>
+                  <li *ngFor="let skill of team.skills">{{ skill }}</li>
+                </ul>
+              </div>
+              <div>
+                <a
+                  routerLink="/hiring/hiring-details"
+                  class="btn btn-primary btn-small"
+                  (click)="onDeatil(i)"
+                >
+                  Apply now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
   </div>
 </section>
-
-<section class="tabinfo topPadding mb-5" *ngIf="searchData.length == 0 || searchText == '' ">
+<section class="tophiring mt-5" *ngIf="filteredOpening.length !== 0 || searchText !== ''">
+  <div class="tabinfo">
+    <div>
+      <div class="row row-default">
+        <div
+          class="col-md-6"
+          *ngFor="let team of filteredOpening; let i = index"
+        >
+          <div class="hirinCard">
+            <div class="hirejobtitle">{{ team.name }}</div>
+            <div class="position">{{ team.position }}</div>
+            <div class="icontext">
+              <div>
+                <img
+                  src="assets/media/icons/hiring/hiring-1.svg"
+                  class="hiringImg"
+                  alt=""
+                />
+                {{ team.experience }}
+              </div>
+              <div>
+                <img
+                  src="assets/media/icons/hiring/hiring-2.svg"
+                  alt=""
+                  class="hiringImg"
+                />
+                {{ team.role }}
+              </div>
+              <div>
+                <img
+                  src="assets/media/icons/hiring/hiring-3.svg"
+                  alt=""
+                  class="hiringImg"
+                />
+                {{ team.package }}
+              </div>
+            </div>
+            <div class="dec">
+              {{ team.sortdiscription }}
+            </div>
+            <div class="listBtn">
+              <div class="list">
+                <ul>
+                  <li *ngFor="let skill of team.skills">{{ skill }}</li>
+                </ul>
+              </div>
+              <div>
+                <a
+                  routerLink="/hiring/hiring-details"
+                  class="btn btn-primary btn-small"
+                  (click)="onDeatil(i)"
+                >
+                  Apply now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  class="tabinfo topPadding mb-5"
+  *ngIf="searchText == '' || (filteredOpening.length == 0 && searchData.length == 0) " 
+>
   <h1 class="fs-48 font-weight-bold mb-5">
     No <span class="fs-48 weight-100"> Results for "{{ searchText }}" </span>
   </h1>

@@ -21,8 +21,9 @@ import { Position } from 'src/app/core/mocks/hiring';
 export class SearchResultComponent implements OnInit {
   title!: string;
   ourWorksItems: any;
-  searchData: any
+  searchData: any =[]
   allData: any;
+  showHiring : boolean= false;
   result: any = [
     {
       "id": 1,
@@ -104,12 +105,14 @@ export class SearchResultComponent implements OnInit {
   ResorucesData = new Resources();
   openingsData = new Position() 
   searchText: string = '';
+  hiringData:any;
+  filteredOpening: any = [];
   constructor(private router: Router, private httpService: HttpService, private staticDataService: StaticDataService, private filteredDataService: FilteredDataService, private breadcumDataService: BreadcumDataService) { }
 
 
   ngOnInit(): void {
     
-    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData];
+    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData, ...this.ResorucesData.ResorucesData];
 
     this.title = "Our Work";
     this.ourWorksItems = [];
@@ -124,10 +127,18 @@ export class SearchResultComponent implements OnInit {
           left: 0,
           behavior: 'smooth'
         });
-
       }
-
     );
+
+    this.filteredOpening = this.hiringData.filter((data : any)=>{
+      // if(searchText == data.name){
+      //   this.showHiring = true;
+      //   data.name.toLowerCase().includes(searchText.toLowerCase())
+      // }else{
+      //   this.showHiring = false;
+      // } 
+      data.name.toLowerCase().includes(this.searchItem.toLowerCase())
+    })
   }
   swiperConfig: any = {
     slidesPerView: 'auto',
@@ -135,7 +146,7 @@ export class SearchResultComponent implements OnInit {
     breakpoints: {
       1200: {
         slidesPerView: 3
-      },
+      }, 
       992: {
         slidesPerView: 3
       },
@@ -145,26 +156,28 @@ export class SearchResultComponent implements OnInit {
     }
   }
 
+  searchItem: any;
+
   getSearchResult(searchText: string) {
     let data = {
       description: searchText
     }
+    this.searchItem = searchText;
     this.searchData = [];
     this.searchData = this.allData.filter((item: any) =>
       item.title.toLowerCase().includes(searchText.toLowerCase())
     );
-    
 
-    this.httpService.post(environment.apiUrl + Urls.API_ENDPOINT.serach, data).subscribe(
-      response => {
-        console.log(response)
-        this.searchData = response;
-      },
-      error => {
-        this.searchData = this.result;
-        console.log(this.searchData)
-      }
-    )
+    // this.httpService.post(environment.apiUrl + Urls.API_ENDPOINT.serach, data).subscribe(
+    //   response => {
+    //     console.log(response)
+    //     this.searchData = response;
+    //   },
+    //   error => {
+    //     this.searchData = this.result;
+    //     console.log(this.searchData)
+    //   }
+    // )
   }
 
   onNavigation(link: any) {
@@ -185,5 +198,7 @@ export class SearchResultComponent implements OnInit {
     }
   }
   
-
+  onDeatil(index: number) {
+    this.filteredDataService.changeJobData(index);
+  }
 }
