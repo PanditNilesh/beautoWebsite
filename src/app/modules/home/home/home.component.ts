@@ -14,7 +14,7 @@ SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  ourWorksItems: any;
   brand = [
     {
       pic: "assets/media/images/client-1.png",
@@ -33,20 +33,32 @@ export class HomeComponent implements OnInit {
       name: "StyleCracker"
     },
     {
-      pic: "assets/media/images/client-6.png",
-      name: "Caratlane"
+      pic: "assets/media/images/C4i4.png",
+      name: "Centre for industry 4.0"
     },
     {
-      pic: "assets/media/images/client-7.png",
-      name: "Druva"
+      pic: "assets/media/images/Parallel Dots.png",
+      name: "Parallel Dots"
     },
-    {
-      pic: "assets/media/images/client-8.png",
-      name: "Affine"
-    },
+    // {
+    //   pic: "assets/media/images/client-6.png",
+    //   name: "Caratlane"
+    // },
+    // {
+    //   pic: "assets/media/images/client-7.png",
+    //   name: "Druva"
+    // },
+    // {
+    //   pic: "assets/media/images/client-8.png",
+    //   name: "Affine"
+    // },
     {
       pic: "assets/media/images/client-9.png",
       name: "Geek Solutions"
+    },
+    {
+      pic: "assets/media/images/Spares Pazari.png",
+      name: "Spares Pazari"
     }
   ]
 
@@ -158,6 +170,9 @@ export class HomeComponent implements OnInit {
     this.title = "Recent Case Studies";
     this.caseStudyItems = this.staticDataService.getCaseStudyData("");
     // case "All":this.caseStudyItems=this.staticDataService.getCaseStudyData('');
-    this.breadcumDataService.currentPage(this.pageName)
+    this.breadcumDataService.currentPage(this.pageName);
+
+    this.ourWorksItems = [];
+    this.ourWorksItems = this.staticDataService.getOurWorkData('','Products');
   }
 }

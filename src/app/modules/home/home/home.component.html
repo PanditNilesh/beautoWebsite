@@ -31,7 +31,7 @@
         <div class="position-relative  ">
             <h6 class="title mb-4">Beauto Innovated for Brands Like</h6>
         </div>
-
+        
 
         <div class="brandspace  ">
             <swiper [config]="swiperConfig" [loop]="true" [autoplay]="true">
@@ -44,10 +44,10 @@
             </swiper>
         </div>
 
-   
+        
         
 
-        <div class="testimonials center">
+        <!-- <div class="testimonials center">
             <swiper [config]="client" [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [loop]="true"
                 [spaceBetween]="0" [navigation]="true" class="swiper_w">
                 <ng-template swiperSlide *ngFor="let comments of coverflow">
@@ -61,10 +61,19 @@
                     </div>
                 </ng-template>
             </swiper>
-        </div>
+        </div> -->
     </div>
 </section>
 
+<section class="earth-bg">
+    <img  src="assets/media/images/home Annimation.gif" alt="" class="we-are-expanding">
+    <span class="expanding-globally">We are <span class="bold-text">Expand</span>ing 
+    <span _ngcontent-wgt-c78="" class="bold-text">Globally</span>
+</span>
+    <span _ngcontent-wgt-c78="" class="reaching">Reaching new horizons and connecting with diverse cultures around the world.</span>
+</section>
+
+<app-all-work-slider [ourWorksItems]="ourWorksItems" [title]="title"></app-all-work-slider>
 
 <section class="pb-100 pt-100">
     <div class="achievements position-relative d-flex align-items-center">

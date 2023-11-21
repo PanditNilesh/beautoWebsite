@@ -109,7 +109,7 @@ export class SearchResultComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData, ...this.ResorucesData.ResorucesData];
+    this.allData = [...this.allWork.ourWorksData, ...this.blogsData.blogData, ...this.servicesData.services, ...this.caseStudyData.caseStudyData];
 
     this.title = "Our Work";
     this.ourWorksItems = [];
@@ -153,17 +153,18 @@ export class SearchResultComponent implements OnInit {
     this.searchData = this.allData.filter((item: any) =>
       item.title.toLowerCase().includes(searchText.toLowerCase())
     );
+    
 
-    // this.httpService.post(environment.apiUrl + Urls.API_ENDPOINT.serach, data).subscribe(
-    //   response => {
-    //     console.log(response)
-    //     this.searchData = response;
-    //   },
-    //   error => {
-    //     this.searchData = this.result;
-    //     console.log(this.searchData)
-    //   }
-    // )
+    this.httpService.post(environment.apiUrl + Urls.API_ENDPOINT.serach, data).subscribe(
+      response => {
+        console.log(response)
+        this.searchData = response;
+      },
+      error => {
+        this.searchData = this.result;
+        console.log(this.searchData)
+      }
+    )
   }
 
   onNavigation(link: any) {

@@ -12,6 +12,8 @@ import { StaticDataService } from 'src/app/shared/services/static-data.service';
 export class AllCaseStudiesComponent implements OnInit, OnDestroy {
   caseStudyItems: any;
   selectedTab: string = "All"
+  
+  blogItems: any;
   subCategoryList: any;
   selectedButton: string = '';
   selectedTabIndex = 0;
@@ -25,11 +27,12 @@ export class AllCaseStudiesComponent implements OnInit, OnDestroy {
     this.currentPageSub = this.breadcumDataService.currentPageSelect.subscribe((x) => {
       this.selectedTab = x;
       this.tabchanedrop =this.selectedTab ;
-   
-        this.getTabIndex(this.selectedTab)
+      this.getTabIndex(this.selectedTab)
       this.changeTabs(this.selectedTab)
     })
     this.servicesView(this.tabchanedrop);
+    this.blogItems = this.staticDataService.getAllResourcesData();
+    this.subCategoryList = this.getSubcategoryList('');
   }
 
 
@@ -68,11 +71,13 @@ export class AllCaseStudiesComponent implements OnInit, OnDestroy {
         break;
     }
   }
+
   onChangeTab(event: any) {
     // console.log(this.selectedButton)
     this.selectedTab = event.tab.textLabel;
     // console.log(this.selectedTab);
-    this.changeTabs(event.tab.textLabel)
+    this.changeTabs(event.tab.textLabel);
+    this.subCategoryList = this.getSubcategoryList('');
   }
 
   getSubcategoryList(items: any) {
@@ -95,6 +100,9 @@ export class AllCaseStudiesComponent implements OnInit, OnDestroy {
     switch (selectedTab) {
       case "All": this.caseStudyItems = this.staticDataService.getCaseStudyData('');
         this.breadcumDataService.changeData('');
+        this.subCategoryList = this.getSubcategoryList(this.caseStudyItems);
+        console.log(this.subCategoryList);
+        
         break;
       case "Design": this.caseStudyItems = this.staticDataService.getCaseStudyData('Design');
         this.breadcumDataService.changeData(` ${this.selectedTab} `);
@@ -124,4 +132,6 @@ export class AllCaseStudiesComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.currentPageSub.unsubscribe()
   }
+
+  
 }

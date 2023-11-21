@@ -135,7 +135,11 @@ const routes: Routes = [
     component: NewsComponent
   },
   {
-    path: 'submitted', component: SubmittedConfirmComponent
+    path: 'submitted', 
+    data: {
+      breadcrumb: 'Submitted'
+    },
+    component: SubmittedConfirmComponent
   },
   {
     path: 'search',

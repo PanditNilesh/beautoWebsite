@@ -43,12 +43,13 @@ export class HiringDetailsComponent implements OnInit {
     Validators.pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
     address: new FormControl('', [Validators.required]),
     workLink: new FormControl(''),
+    resume : new FormControl('',[Validators.required])
   });
+  showErrorMsg : boolean = false;
 
   constructor(private breadcumDataService: BreadcumDataService, private filteredDataService: FilteredDataService, private httpService:HttpService, private staticDataService:StaticDataService, private router:Router) {
     let hiring = new Position();
     this.open_hiring = hiring.opening;
-
     let prefixes = new Prefixes();
     this.prefixes = prefixes.countriesData;
     // this.prefixes=[...new Set(prefixes.number)];
@@ -57,15 +58,17 @@ export class HiringDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-
     this.breadcumDataService.changeData('');
     this.filteredDataService.currentJob.subscribe(
       data => {
         this.jobDetails = this.open_hiring[data];
       }
     )
-
+    console.log(this.jobApplyForm.get('contactNo')?.value);
+    
+    if(this.jobApplyForm.get('contactNo')?.value == this.jobApplyForm.get('altContactNo')?.value){
+      this.showErrorMsg = true;
+    }
   }
   get jobApplyFormControl() {
     return this.jobApplyForm.controls;
@@ -135,7 +138,7 @@ export class HiringDetailsComponent implements OnInit {
   onSubmit(form: any) {
     this.submitted = true;
     
-    if (form.valid) {
+    {
      
       this.isSubmitted = false;
       const formData: FormData = new FormData();

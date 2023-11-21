@@ -23,6 +23,7 @@ import { BlogDetailsComponent } from './components/blogs/blog-details/blog-detai
 import { BlogsSliderComponent } from './components/blogs/blogs-slider/blogs-slider.component';
 import { CaseStudySliderComponent } from './components/case-studies/case-study-slider/case-study-slider.component';
 import { SearchResultComponent } from './components/search-result/search-result.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 
@@ -42,7 +43,8 @@ import { SearchResultComponent } from './components/search-result/search-result.
     BlogDetailsComponent,
     BlogsSliderComponent,
     CaseStudySliderComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,

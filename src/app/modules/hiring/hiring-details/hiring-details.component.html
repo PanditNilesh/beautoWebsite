@@ -37,7 +37,7 @@
                                 Read Description
                             </div> -->
                             <a (click)="onApply()" class="btn btn-primary" *ngIf="!isApply">Apply</a>
-                            <button type="submit" class="btn btn-primary ms-3" *ngIf="isApply">Submit</button>
+                            <button type="submit" class="btn btn-primary ms-3" *ngIf="isApply" [disabled]="jobApplyForm.invalid">Submit</button>
                             <a routerLink="/hiring" class="btn btn-secondary border ms-3" *ngIf="!isApply">Cancel</a>
                             <a (click)="isApply=false" class="btn btn-secondary border ms-3" *ngIf="isApply">Cancel</a>
                         </div>
@@ -80,7 +80,7 @@
 
                         <div class="floating-label">
                             <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
-                                formControlName="firstName" required>
+                                formControlName="firstName" required autocomplete="off">
                             <label for="firstname" class="form-label">First name*</label>
                         </div> 
                         
@@ -100,7 +100,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="floating-label">
                             <input type="text" id="lastName" placeholder="Last Name*" class="form-control form-input"
-                                formControlName="lastName" required>
+                                formControlName="lastName" required autocomplete="off">
                             <label for="lastName" class="form-label">Last name*</label>
                         </div> 
 
@@ -126,7 +126,8 @@
                                     {{country.name}}
                                 </option>
                             </select>
-                            <label for="country" class="form-label">Select Country*</label>
+                            <!-- <label for="country" class="form-label">Select Country*</label> -->
+                            
                         </div>
 
 
@@ -142,7 +143,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="floating-label">
                             <input type="email" id="email" placeholder="Email Address*" class="form-control form-input"
-                                formControlName="email" required>
+                                formControlName="email" required autocomplete="off">
                             <label for="email" class="form-label">Email Address*</label>
                         </div> 
 
@@ -169,7 +170,7 @@
                     <div class="col-md-5 mb-3">
                         <div class="floating-label">
                             <input type="number" id="contactNo" placeholder="Contact Number*" maxlength="14" class="form-control form-input"
-                            formControlName="contactNo" required>
+                            formControlName="contactNo" required autocomplete="off">
                             <label for="email" class="form-label">Contact Number*</label>
                         </div> 
 
@@ -207,13 +208,10 @@
                     <div class="col-md-5 mb-3">
 
                         <div class="floating-label">
-                            <input type="text" id="altContactNo" placeholder="Alternate Contact Number" class="form-control form-input"
-                            formControlName="altContactNo" maxlength="14" >
-
- 
+                            <input type="number" id="altContactNo" placeholder="Alternate Contact Number*" class="form-control form-input"
+                            formControlName="altContactNo" maxlength="14" autocomplete="off">
                             <label for="email" class="form-label">Alternate Contact Number*</label>
                         </div> 
-
                        
                             <div
                     *ngIf="(jobApplyFormControl['altContactNo'].touched && jobApplyFormControl['altContactNo'].invalid) || isSubmitted">
@@ -229,17 +227,21 @@
                     *ngIf="jobApplyFormControl['altContactNo'].errors && jobApplyFormControl['altContactNo'].errors['maxlength']">
                     <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
                 </div>
+                
                 <div
                                 *ngIf="jobApplyFormControl['altContactNo'].errors &&  jobApplyFormControl['altContactNo'].errors['prefixValid']">
                                 <small class="form-text text-danger">Enter valid contact no</small>
                             </div>
                 </div>
+                <div *ngIf="this.jobApplyForm.get('contactNo')?.value == this.jobApplyForm.get('altContactNo')?.value">
+                    <small class="form-text text-danger alternateContact">Contact number and Alternate number should not be same.</small>
+                </div>
                     </div>
-
+                    
                     <div class="col-md-12 mb-3">
                         <div class="floating-label">
                             <input type="text" id="address" placeholder="You’re Address*" maxlength="14" class="form-control form-input"
-                            formControlName="address" required>
+                            formControlName="address" required autocomplete="off">
                             <label for="address" class="form-label">You’re Address*</label>
                         </div>
 
@@ -259,17 +261,25 @@
                     <div class="col-md-12 mb-3">
                         <div class="floating-label">
                             <input type="text" id="workLink" placeholder="Work link*"  class="form-control form-input"
-                            formControlName="workLink" required>
-                            <label for="workLink" class="form-label">You’re Address*</label>
+                            formControlName="workLink" autocomplete="off">
+                            <label for="workLink" class="form-label">Work link</label>
                         </div>
-
                     </div>
                     <h5>Resume</h5>
                     <div class="col-md-12 mb-3">
-                        <input type="file" id="actual-btn" (change)="readFile($event)" hidden />
-                        <label for="actual-btn " class="choose">Choose File</label>
-                        <span id="file-chosen" *ngIf="fileName==''"> No file selected DOC, DOCX and PDF (5 MB)</span>
-                        <span id="file-chosen" *ngIf="fileName!=''"> {{fileName}}</span>
+                        <div class="d-flex align-items-center text-muted">
+                            <input type="file" id="actual-btn" formControlName="resume" required (change)="readFile($event)" hidden />
+                            <label for="actual-btn" class="choose">Choose File</label>
+                            <span id="file-chosen" *ngIf="fileName==''"> No file selected DOC, DOCX and PDF (5 MB)</span>
+                            <span id="file-chosen" *ngIf="fileName!=''"> {{fileName}}</span>
+                            <div *ngIf="fileName==''" class="ml-2">
+                                <small class="form-text text-danger">Please upload Resume</small>
+                            </div>
+                        </div>
+                       
+                        <!-- <label for="actual-btn " class="choose">Choose File</label> -->
+                        <!-- <span id="file-chosen" *ngIf="fileName==''"> No file selected DOC, DOCX and PDF (5 MB)</span>
+                        <span id="file-chosen" *ngIf="fileName!=''"> {{fileName}}</span> -->
                     </div>
                 </div>
 

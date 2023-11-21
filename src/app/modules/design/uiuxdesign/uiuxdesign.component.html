@@ -127,4 +127,4 @@
     </div>
 </section>
 
-<app-connect-now *ngIf = "connectClicked"></app-connect-now>
+<app-connect-now *ngIf = "connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

@@ -10,6 +10,9 @@ const routes: Routes = [
   },
   {
     path: 'hiring-details',
+    data: {
+      breadcrumb: 'Hiring-details'
+    },
     component: HiringDetailsComponent
   }
 ];

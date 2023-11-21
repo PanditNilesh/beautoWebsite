@@ -13,6 +13,7 @@ import { Urls } from '../../mocks/api-endpoints';
 import { Prefixes } from '../../mocks/prefixes';
 import { map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 // import { LocationComponent } from './modal/location/location.component';
 
@@ -31,9 +32,12 @@ export class SidebarComponent implements OnInit {
   clickedMenu: boolean = false;
   defaultMenu: boolean = true;
 
-  constructor(public dialog: MatDialog, private dialogRef: MatDialog, private breadcumDataService: BreadcumDataService, private router:Router, private staticDataService:StaticDataService) {
+  scrollStrategy: ScrollStrategy;
+
+  constructor(private readonly sso: ScrollStrategyOptions,public dialog: MatDialog, private dialogRef: MatDialog, private breadcumDataService: BreadcumDataService, private router:Router, private staticDataService:StaticDataService) {
     let sidebar_menu = new sidebar();
     this.leftmenu = sidebar_menu.side_menu;
+    this.scrollStrategy = this.sso.noop();
   }
 
   ngOnInit(): void {
@@ -61,7 +65,8 @@ export class SidebarComponent implements OnInit {
     const dialogRef = this.dialog.open(ContactComponent, {
       width: 'auto',
       hasBackdrop: false,
-      panelClass: 'custom-modalbox'
+      panelClass: 'custom-modalbox',
+      scrollStrategy: this.scrollStrategy
     });
     dialogRef.afterClosed().subscribe(result => {
       this.isContactPopUp = result;
@@ -76,6 +81,7 @@ export class SidebarComponent implements OnInit {
       width: 'auto',
       panelClass: 'custom-modalbox',
       hasBackdrop: false,
+      scrollStrategy: this.scrollStrategy
     });
     dialogRef.afterClosed().subscribe(result => {
       this.isMailClicked = result.isSuccess;
@@ -93,7 +99,8 @@ export class SidebarComponent implements OnInit {
     const dialogRef = this.dialog.open(LocationComponent, {
       width: 'auto',
       height: 'auto',
-      panelClass: 'custom-modalbox'
+      panelClass: 'custom-modalbox',
+      scrollStrategy: this.scrollStrategy
     });
     dialogRef.afterClosed().subscribe((result) => {
 if(result!=undefined){

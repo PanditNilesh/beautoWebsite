@@ -32,4 +32,7 @@ export class ArVrComponent implements OnInit {
     this.connectClicked = true;
   }
 
+  connectCloseClicked(event: boolean) {
+    this.connectClicked = event;
+  }
 }

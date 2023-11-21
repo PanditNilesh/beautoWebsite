@@ -3,7 +3,7 @@ export class OurWorks {
     {
       id: "1",
       title: "Beverage Dispenser Machine",
-      pic: "assets/media/images/design/design-our-works-2.png",
+      pic: "assets/media/images/design/beverage.jpg",
       desc: "Fresh cold beverages making and dispensing unit.",
       category: "Design",
       subcategory: "Products",
@@ -16,7 +16,7 @@ export class OurWorks {
       desc: "Premium packaging for smart automation product.",
       category: "Design",
       subcategory: "Products",
-      link: "/ayu"
+      link: "assets/media/pdf/Our-Work/Design/Product/Ayu.pdf"
     },
     {
       id: "3",
@@ -30,30 +30,22 @@ export class OurWorks {
     {
       id: "4",
       title: "Flowla",
-      pic: "assets/media/images/design/design-our-works-6.png",
+      pic: "assets/media/images/design/flowla.jpg",
       desc: "Floral series has well crafted wooden lamps that illuminates your houses with warm and positive light",
       category: "Design",
       subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
+      link: "assets/media/pdf/Our-Work/Design/Product/Flowla.pdf"
     },
     {
       id: "5",
-      title: "AHARA",
-      pic: "assets/media/images/design/design-our-works-6.png",
-      desc: "Fresh food & liquid dispensing machine.",
+      title: "Swing",
+      pic: "assets/media/images/design/swing.jpg",
+      desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
       category: "Design",
       subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
+      link: "assets/media/pdf/Our-Work/Design/Product/Swing.pdf"
     },
-    {
-      id: "6",
-      title: "Desk organiser",
-      pic: "assets/media/images/design/design-our-works-6.png",
-      desc: "LOGO design and digital brand marketing and advertizing.",
-      category: "Design",
-      subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Design/Product/AHARA - 2nd Septmber 2021-1.pdf"
-    },
+    
     // {
     //   title: "Planter",
     //   pic: "assets/media/images/design/design-our-works-7.png",
@@ -207,15 +199,15 @@ export class OurWorks {
     //   subcategory: "Photography",
     //   link: "/new/comingSoon"
     // },
-    {
-      id: "7",
-      title: "AGV 1000",
-      pic: "assets/media/images/mechanical/mechanical-our-works-1.png",
-      desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
-      category: "Mechanical",
-      subcategory: "Products",
-      link: "assets/media/pdf/Our-Work/Mechanical/Products/AGV PPT.pdf"
-    },
+    // {
+    //   id: "7",
+    //   title: "AGV 1000",
+    //   pic: "assets/media/images/mechanical/mechanical-our-works-1.png",
+    //   desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
+    //   category: "Mechanical",
+    //   subcategory: "Products",
+    //   link: "assets/media/pdf/Our-Work/Mechanical/Products/AGV PPT.pdf"
+    // },
     {
       id: "8",
       title: "IIoTConnx - SaaS Application",
@@ -349,6 +341,24 @@ export class OurWorks {
     // },
     {
       id: "18",
+      title: "ADSS",
+      pic: "assets/media/images/design/adss.jpg",
+      desc: "Marketing material for products, machines & organizations",
+      category: "Design",
+      subcategory: "Projects",
+      link: "assets/media/pdf/Our-Work/Software/All/ADSS Application.pdf"
+    },
+    {
+      id: "18",
+      title: "Smart Pole",
+      pic: "assets/media/images/design/smart pole.jpg",
+      desc: "Marketing material for products, machines & organizations",
+      category: "Design",
+      subcategory: "Projects",
+      link: "https://www.behance.net/gallery/172793597/SMART-POLE"
+    },
+    {
+      id: "18",
       title: "Brochures & Catalogues",
       pic: "assets/media/images/design/graphic/3.png",
       desc: "Marketing material for products, machines & organizations",
@@ -363,16 +373,7 @@ export class OurWorks {
       desc: "A welcome and usable products kit for employees",
       category: "Design",
       subcategory: "Projects",
-      link: "/new/comingSoon"
-    },
-    {
-      id: "20",
-      title: "Flyer, Banner & Hordings",
-      pic: "assets/media/images/design/graphic/5.png",
-      desc: "Indoor & outdoor printable marketing material",
-      category: "Design",
-      subcategory: "Projects",
-      link: "https://www.behance.net/gallery/138119769/BILLBOARDS"
+      link: "assets/media/pdf/Our-Work/Design/Product/Merchandize kit.pdf"
     },
     {
       id: "21",
@@ -401,15 +402,6 @@ export class OurWorks {
       link: "https://www.behance.net/gallery/134425509/PRODUCT-PHOTOGRAPHY"
     },
     {
-      id: "23",
-      title: "Food Photos",
-      pic: "assets/media/images/design/photo/2.png",
-      desc: "Serving and digital marketing photo & videos",
-      category: "Design",
-      subcategory: "Projects",
-      link: "/new/comingSoon"
-    },
-    {
       id: "24",
       title: "Industrial Machine Photos and Videos",
       pic: "assets/media/images/design/photo/3.png",
@@ -418,15 +410,7 @@ export class OurWorks {
       subcategory: "Projects",
       link: "/new/comingSoon"
     },
-    {
-      id: "25",
-      title: "Machine Photos",
-      pic: "assets/media/images/design/photo/4.png",
-      desc: "Contextual product photography",
-      category: "Design",
-      subcategory: "Projects",
-      link: "/new/comingSoon"
-    },
+
     {
       id: "26",
       title: "Kumar Interiors",
@@ -434,7 +418,7 @@ export class OurWorks {
       desc: "Cinematic video shoot of interior studio",
       category: "Design",
       subcategory: "Projects",
-      link: "/new/comingSoon"
+      link: "https://www.youtube.com/watch?v=vOV_pNSqsSc"
     },
     // {
     //     id: "7",
@@ -456,12 +440,21 @@ export class OurWorks {
     },
     {
       id: "28",
-      title: "Wire Mesh Cutting",
+      title: "Material Handling Equipments",
       pic: "assets/media/images/mechanical/mechanical-our-works-2.png",
       desc: "Stackers, EOT Cranes, Service Lift, Service Cranes, Light Weight Cranes, Fork Lift.",
       category: "Mechanical",
       subcategory: "Projects",
       link: "assets/media/pdf/Our-Work/Mechanical/Products/MATERIAL HANDLING SERVICES.pdf"
+    },
+    {
+      id: "28",
+      title: "Wire Mesh Cutting",
+      pic: "assets/media/images/mechanical/wire mesh cutting.png",
+      desc: "Stackers, EOT Cranes, Service Lift, Service Cranes, Light Weight Cranes, Fork Lift.",
+      category: "Mechanical",
+      subcategory: "Projects",
+      link: "assets/media/pdf/Our-Work/Mechanical/Products/Wire mesh cutting.pdf"
     },
     {
       id: "29",

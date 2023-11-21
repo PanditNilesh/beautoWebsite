@@ -32,4 +32,7 @@ export class MobileWebDevelopementComponent implements OnInit {
     this.connectClicked = true;
   }
 
+  connectCloseClicked(event: boolean) {
+    this.connectClicked = event;
+  }
 }
