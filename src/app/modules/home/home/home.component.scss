@@ -102,12 +102,13 @@
         width: 100%;
         height: calc(100vh - 85px);
         top: 0px;
+        // display: inline-flex;
         // background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
     }
 
     video {
         min-width: 100%;
-        min-height: 100vh;
+        min-height: 100%;
         z-index: 1;
     }
 

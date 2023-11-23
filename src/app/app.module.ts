@@ -18,6 +18,8 @@ import { BuildyourteamComponent } from './modules/buildyourteam/buildyourteam.co
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { CookieService } from 'ngx-cookie-service';
+import { NgxUiLoaderModule } from "ngx-ui-loader";
+import { LoaderComponent } from './shared/components/loader/loader.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -40,6 +42,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     AppComponent,
     SubmitideaComponent,
     BuildyourteamComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ const cookieConfig: NgcCookieConsentConfig = {
     BrowserAnimationsModule,
     NgwWowModule,
     DragDropModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    // NgxUiLoaderModule
     // NgcCookieConsentModule,
     // NgcCookieConsentConfig
 

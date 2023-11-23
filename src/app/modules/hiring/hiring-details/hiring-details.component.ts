@@ -11,6 +11,8 @@ import { environment } from 'src/environments/environment';
 import { Urls } from 'src/app/core/mocks/api-endpoints';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ErrorModalComponent } from 'src/app/shared/components/modals/error-modal/error-modal.component';
 
 @Component({
   selector: 'app-hiring-details',
@@ -31,6 +33,7 @@ export class HiringDetailsComponent implements OnInit {
   minMobileLength:number=5;
   maxMobileLength:number=14;
   mobileNoPrefix:any;
+  errorMsg : string='';
   jobApplyForm = new FormGroup({
     firstName: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
     lastName: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z ]*$')]),
@@ -47,7 +50,7 @@ export class HiringDetailsComponent implements OnInit {
   });
   showErrorMsg : boolean = false;
 
-  constructor(private breadcumDataService: BreadcumDataService, private filteredDataService: FilteredDataService, private httpService:HttpService, private staticDataService:StaticDataService, private router:Router) {
+  constructor(private breadcumDataService: BreadcumDataService, private filteredDataService: FilteredDataService, private httpService:HttpService, private staticDataService:StaticDataService, private router:Router,public dialog: MatDialog) {
     let hiring = new Position();
     this.open_hiring = hiring.opening;
     let prefixes = new Prefixes();
@@ -135,6 +138,15 @@ export class HiringDetailsComponent implements OnInit {
 
   }
 
+
+  //  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  //   this.dialog.open(DialogAnimationsExampleDialog, {
+  //     width: '250px',
+  //     enterAnimationDuration,
+  //     exitAnimationDuration,
+  //   });
+  // }
+
   onSubmit(form: any) {
     this.submitted = true;
     
@@ -154,7 +166,6 @@ export class HiringDetailsComponent implements OnInit {
       formData.append('emailId', form.value.email);
       this.httpService.postFileData(environment.apiUrl+Urls.API_ENDPOINT.hiring,formData).subscribe(
         response=>{
-          console.log(response);
           this.isApply = false;
           this.isSubmitted = true;
           this.staticDataService.setSubmittedData({email:response.email, code:response.referenceKey,highlitedtitle:"We're", nothighlitedtitle:"Hiring"});
@@ -162,10 +173,11 @@ export class HiringDetailsComponent implements OnInit {
           this.router.navigate(['/submitted'])
         },
         error=>{
-          console.log(error);
           this.staticDataService.setSubmittedData({email:form.value.email, code:'',highlitedtitle:"We're", nothighlitedtitle:"Hiring"})
-          this.breadcumDataService.changeData('We are hiring');
-          this.router.navigate(['/submitted'])
+          // this.breadcumDataService.changeData('We are hiring');
+          this.errorMsg = error.error.error;
+          // this.router.navigate(['/submitted']);
+          // this.openDialog()
           if(error.status==200){
             this.isApply = false;
             this.isSubmitted = true;
@@ -177,5 +189,11 @@ export class HiringDetailsComponent implements OnInit {
 
   }
 
+  openDialog(): void {
+    this.dialog.open(ErrorModalComponent, {
+      width: '250px',
+      data:this.errorMsg
+    });
+  }
 
 }
