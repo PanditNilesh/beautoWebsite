@@ -24,6 +24,7 @@ import { BlogsSliderComponent } from './components/blogs/blogs-slider/blogs-slid
 import { CaseStudySliderComponent } from './components/case-studies/case-study-slider/case-study-slider.component';
 import { SearchResultComponent } from './components/search-result/search-result.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { ErrorModalComponent } from './components/modals/error-modal/error-modal.component';
 
 
 
@@ -44,7 +45,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     BlogsSliderComponent,
     CaseStudySliderComponent,
     SearchResultComponent,
-    LoaderComponent
+    // LoaderComponent,
+    ErrorModalComponent
   ],
   imports: [
     CommonModule,

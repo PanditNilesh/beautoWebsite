@@ -20,6 +20,7 @@
         </div>
     </div>
 </section> -->
+
 <section class="topPadding mb-5" *ngIf="!isSubmitted">
 
     <form [formGroup]="jobApplyForm" (ngSubmit)="onSubmit(jobApplyForm)">
@@ -288,5 +289,6 @@
         </div>
     </form>
 </section>
+
 <!-- <app-submitted-confirm [highlitedtitle]="highlitedtitle" [nothighlitedtitle]="nothighlitedtitle"
     *ngIf="!isApply && isSubmitted"></app-submitted-confirm> -->

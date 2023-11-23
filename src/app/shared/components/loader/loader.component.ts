@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LoaderService } from '../../services/loader.service';
 
 @Component({
@@ -10,11 +10,23 @@ export class LoaderComponent implements OnInit {
 
   isLoading: boolean = true;
 
-  constructor(private loaderService: LoaderService) { }
+  showSpinner = false;
+
+  constructor(private loaderService: LoaderService,private cdRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.loaderService.isLoading.subscribe((loading: boolean) => {
       this.isLoading = loading;
+    });
+
+    this.init();
+  }
+
+  init() {
+
+    this.loaderService.getSpinnerObserver().subscribe((status : any) => {
+      this.showSpinner = (status === 'start');
+      this.cdRef.detectChanges();
     });
   }
 

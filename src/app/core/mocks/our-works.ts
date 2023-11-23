@@ -41,7 +41,7 @@ export class OurWorks {
       title: "Swing",
       pic: "assets/media/images/design/swing.jpg",
       desc: "Customized Automated Guided Vehicles are available from 50 Kg – 5000Kg.",
-      category: "Design",
+      category: "Mechanical",
       subcategory: "Products",
       link: "assets/media/pdf/Our-Work/Design/Product/Swing.pdf"
     },
@@ -351,7 +351,7 @@ export class OurWorks {
       id: "18",
       title: "Smart Pole",
       pic: "assets/media/images/design/smart pole.jpg",
-      desc: "Marketing material for products, machines & organizations",
+      desc: "A Pole that incorporates EV,Screen,Speaker,Mosquito trapper,Camera and Street lamp for Smart City and spaces",
       category: "Design",
       subcategory: "Projects",
       link: "https://www.behance.net/gallery/172793597/SMART-POLE"
@@ -403,11 +403,11 @@ export class OurWorks {
     {
       id: "24",
       title: "Industrial Machine Photos and Videos",
-      pic: "assets/media/images/design/photo/3.png",
+      pic: "assets/media/images/design/photo/3.jpg",
       desc: "Logo design and digital brand marketing & advertizing",
       category: "Design",
       subcategory: "Projects",
-      link: "/new/comingSoon"
+      link: "https://www.behance.net/gallery/137623485/Industrial-Machine-Videos-By-Beauto-Design-Studio"
     },
 
     {
