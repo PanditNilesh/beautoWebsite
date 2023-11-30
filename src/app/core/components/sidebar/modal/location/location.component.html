@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <input type="text" placeholder="Last Name" class="form-control" formControlName="lastname" required>
+                    <input type="text" placeholder="Last Name" class="form-control" formControlName="lastname" required autocomplete="off">
                     <div *ngIf="scheduleFormControl.lastname.invalid && submitted">
                         <div *ngIf="scheduleFormControl.lastname?.errors">
                           <small class="form-text text-danger text-right">Enter your last name</small>
@@ -79,7 +79,7 @@
                 <div class="col-md-12 mb-3">
                     <div class="position-relative">
                         <!-- <mat-icon class="email"> email</mat-icon> -->
-                        <input type="email" placeholder="Email Address" class="form-control ps-5" formControlName="email" required>
+                        <input type="email" placeholder="Email Address" class="form-control ps-5" formControlName="email" required autocomplete="off">
                         <div *ngIf="scheduleFormControl.email.invalid && submitted">
                             <div *ngIf="scheduleFormControl.email?.errors">
                               <small class="form-text text-danger text-right">Enter your email</small>
@@ -93,7 +93,7 @@
                 <div class="col-md-12 mb-3">
                     <div class="position-relative">
                         <!-- <mat-icon class="mobile">mobile_friendly</mat-icon> -->
-                        <input type="text" placeholder="Contact Number" class="form-control ps-5" formControlName="contactNo" maxlength="14" required>
+                        <input type="text" placeholder="Contact Number" class="form-control ps-5" formControlName="contactNo" maxlength="14" required autocomplete="off">
                         <div *ngIf="scheduleFormControl.contactNo.invalid && submitted">
                             <div *ngIf="scheduleFormControl.contactNo?.errors">
                               <small class="form-text text-danger text-right">Enter your contact no</small>
@@ -107,7 +107,7 @@
                 <div class="col-md-12 mb-3">
                     <div class="position-relative">
                         <!-- <mat-icon class="mobile">date_range</mat-icon> -->
-                        <input type="datetime-local" placeholder="Select Date & Time" class="form-control ps-5" formControlName="dateAndTime" required>
+                        <input type="datetime-local" placeholder="Select Date & Time" class="form-control ps-5" formControlName="dateAndTime" required autocomplete="off">
                         <div *ngIf="scheduleFormControl.dateAndTime.invalid && submitted">
                             <div *ngIf="scheduleFormControl.dateAndTime?.errors">
                               <small class="form-text text-danger text-right">Select date and time</small>

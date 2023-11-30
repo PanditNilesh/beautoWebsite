@@ -24,7 +24,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="floating-label">
                         <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
-                            formControlName="firstName" required>
+                            formControlName="firstName" required autocomplete="off">
                         <label for="firstname" class="form-label">First name*</label>
                     </div>
                     <div *ngIf="scheduleFormControl['firstName'].touched && scheduleFormControl['firstName'].invalid">
@@ -41,7 +41,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="floating-label">
                         <input type="text" id="lastname" placeholder="Last Name*" class="form-control form-input"
-                            formControlName="lastName" required>
+                            formControlName="lastName" required autocomplete="off">
                         <label for="firstname" class="form-label">Last name*</label>
                     </div>
                     <div *ngIf="scheduleFormControl['lastName'].touched && scheduleFormControl['lastName'].invalid">
@@ -60,7 +60,7 @@
                     <div class="position-relative">
                         <div class="floating-label">
                             <input type="email" id="email" placeholder="Email Address*" class="form-control form-input"
-                                formControlName="email" required>
+                                formControlName="email" required autocomplete="off">
                             <label for="email" class="form-label">Email Address*</label>
                         </div>
                         <div *ngIf="scheduleFormControl['email'].touched && scheduleFormControl['email'].invalid">
@@ -101,7 +101,7 @@
                     <div class="position-relative">
                         <div class="floating-label">
                             <input type="text" id="contactNo" placeholder="Contact Number*"
-                                class="form-control form-input" maxlength="14" formControlName="contactNo" required>
+                                class="form-control form-input" maxlength="14" formControlName="contactNo" required autocomplete="off">
                             <label for="contactNo" class="form-label">Contact Number*</label>
                         </div>
                         <div
@@ -135,7 +135,7 @@
                         <div class="floating-label">
                             <input type="datetime-local" id="dateAndTime" placeholder="Select Date & Time*"
                                 class="form-control form-input" [min]="minDate" [max]="maxDate"
-                                formControlName="dateAndTime" style="min-height: inherit;" required>
+                                formControlName="dateAndTime" style="min-height: inherit;" required autocomplete="off">
                             <label for="dateAndTime" class="form-label">Select Date & Time*</label>
                         </div>
                         <div
@@ -160,7 +160,7 @@
                 </div>
                 <div class="col-md-12 mb-3">
                     <div class="floating-label textarea-height">
-                        <textarea name="" id="meetingMsg" cols="30" rows="5" class="form-control textarea"
+                        <textarea style="color : rgba(0, 0, 0, 0.4);" name="" id="meetingMsg" cols="30" rows="5" class="form-control textarea"
                              formControlName="meetingMsg" required></textarea>
                         <label for="msg" class="form-label">Brief for the meeting*</label>
                     </div>
