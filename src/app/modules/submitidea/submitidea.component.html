@@ -186,7 +186,7 @@
                             </div>
                             
                         </div>
-                        <div class="text-center" *ngIf="this.submitIdeaForm.get('contactNo')?.value == this.submitIdeaForm.get('altContactNo')?.value">
+                        <div class="text-center" *ngIf="this.submitIdeaForm.get('contactNo')?.value == this.submitIdeaForm.get('altContactNo')?.value && this.submitIdeaForm.get('altContactNo')?.touched">
                             <small class="form-text text-danger alternateContact">Contact number and Alternate number should not be same.</small>
                         </div>
 

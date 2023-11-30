@@ -27,7 +27,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="floating-label">
                         <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
-                            formControlName="firstName" required>
+                            formControlName="firstName" required autocomplete="off">
                         <label for="firstname" class="form-label">First name*</label>
                     </div>
                     <div *ngIf="stouchFormControl['firstName'].touched && stouchFormControl['firstName'].invalid">
@@ -44,7 +44,7 @@
                 <div class="col-md-6 mb-3">
                     <div class="floating-label">
                         <input type="text" id="lastname" placeholder="Last Name*" class="form-control form-input"
-                            formControlName="lastName" required>
+                            formControlName="lastName" required autocomplete="off">
                         <label for="lastname" class="form-label">Last Name*</label>
                     </div>
                     <div *ngIf="stouchFormControl['lastName'].touched && stouchFormControl['lastName'].invalid">
@@ -63,7 +63,7 @@
                     <div class="floating-label">
                         <!-- <mat-icon class="email"> email</mat-icon> -->
                         <input type="email" id="email" placeholder="Email Address*" class="form-control form-input"
-                            formControlName="email" required>
+                            formControlName="email" required autocomplete="off">
                         <label for="lastname" class="form-label">Email Address*</label>
                     </div>
 
@@ -95,13 +95,13 @@
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo" readonly>
+                    <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo" readonly autocomplete="off">
                 </div>
                 <div class="col-md-9 mb-3">
                     <div class="floating-label">
                         <!-- <mat-icon class="mobile">mobile_friendly</mat-icon> -->
                         <input type="text" id="contactNo" placeholder="Contact Number*" class="form-control form-input"
-                            formControlName="contactNo" maxlength="14" required>
+                            formControlName="contactNo" maxlength="14" required autocomplete="off">
                         <label for="contactNo" class="form-label">Contact Number*</label>
                     </div>
                     <div>

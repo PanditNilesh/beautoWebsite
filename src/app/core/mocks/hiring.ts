@@ -42,53 +42,6 @@ export class Position {
         },
         {
             pic: "assets/media/images/team/software/S1.png",
-            name: "Junior Industrial Product Designer",
-            position: "Designer",
-            experience: "0-4 years",
-            role: "Full-time",
-            package: "6-8 LPA",
-            skills: [
-                "Html", "css", "javascript", "Angular"
-            ],
-            location: "Pune",
-
-            sortdiscription: [
-                "We are seeking a talented and motivated Junior Industrial Product Designer to join our design team. As a Junior Industrial Product Designer."
-            ],
-
-            discription: "We are seeking a talented and motivated Junior Industrial Product Designer to join our design team. As a Junior Industrial Product Designer, you will work closely with senior designers and cross-functional teams to contribute to the research, conceptualisation, design, and development of new products. This role offers an exciting opportunity for a creative thinker with a passion for industrial design to grow and excel in a dynamic environment.",
-            responsibilities: [
-                "Collaborate with senior designers to translate product concepts and ideas into tangible designs through research.",
-                "Assist in the development of sketches, renderings, and prototypes using CAD software and traditional sketching techniques.",
-                "Create detailed 3D models using CAD softwares.",
-                "Conduct research on materials, manufacturing processes, and market trends to inform design decisions.",
-                "Generate detailed technical drawings and specifications for production.",
-                "Participate in design reviews and provide constructive feedback to improve product concepts.",
-                "Work closely with cross-functional teams (engineering, marketing, and production) to ensure designs meet technical and market requirements.",
-                "Contribute to brainstorming sessions and ideation workshops to generate innovative product concepts.",
-                "Should have knowledge about current design trends."
-            ],
-            requirements: [
-                "Master's degree in Industrial Design, Product Design, or a related field.",
-                "Bachelor’s Desiree in Mechanical or Production Engineering.",
-                "Proficiency in CAD software (e.g., Rhino, Fusion 360) and Adobe Creative Suite.",
-                "Strong sketching and prototyping skills.",
-                "Knowledge of materials, manufacturing processes, and design principles.",
-                "Familiarity with interaction design and information architecture.",
-                "Excellent communication and teamwork skills.",
-                "Ability to work in a fast-paced, collaborative environment.",
-                "Experience with 3D printing and rapid prototyping.",
-                "Knowledge of ergonomics and user-centered design principles.",
-                "Familiarity with design thinking methodologies."
-            ],
-            benefits: [
-                "Beauto Systems Pvt Ltd offers a competitive compensation package, a collaborative work environment,and opportunities for skill development and career advancement. As a Full Stack Developer at Beauto Systems Pvt Ltd, you&#39;ll have the chance to work on exciting projects and make a meaningful impact on our clients&#39; businesses.",
-                "If you are a talented Full Stack Developer with a passion for leveraging advanced tools and technologies to create exceptional web applications, we invite you to apply for this exciting role at Beauto Systems Pvt Ltd. Join our team and be a driving force behind the success of our innovative projects."
-            ]
-        },
-
-        {
-            pic: "assets/media/images/team/software/S1.png",
             name: "Embedded Software Engineer",
             position: "Software",
             experience: "Mid Senior",

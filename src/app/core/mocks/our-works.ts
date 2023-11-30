@@ -342,7 +342,7 @@ export class OurWorks {
       id: "18",
       title: "ADSS",
       pic: "assets/media/images/design/adss.jpg",
-      desc: "Marketing material for products, machines & organizations",
+      desc: "ADSS application is a solution developed  for the maritime sector that allows for the quick measuring of a ship's draft.",
       category: "Design",
       subcategory: "Projects",
       link: "assets/media/pdf/Our-Work/Software/All/ADSS Application.pdf"
