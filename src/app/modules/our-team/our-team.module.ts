@@ -5,11 +5,13 @@ import { OurTeamRoutingModule } from './our-team-routing.module';
 import { OurTeamComponent } from './our-team.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { CountUpDirective } from 'src/app/shared/directives/count-up.directive';
 
 
 @NgModule({
   declarations: [
-    OurTeamComponent
+    OurTeamComponent,
+    CountUpDirective
   ],
   imports: [
     CommonModule,

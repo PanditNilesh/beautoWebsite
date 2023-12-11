@@ -25,6 +25,7 @@ import { CaseStudySliderComponent } from './components/case-studies/case-study-s
 import { SearchResultComponent } from './components/search-result/search-result.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { ErrorModalComponent } from './components/modals/error-modal/error-modal.component';
+import { CountUpDirective } from './directives/count-up.directive';
 
 
 
@@ -46,7 +47,7 @@ import { ErrorModalComponent } from './components/modals/error-modal/error-modal
     CaseStudySliderComponent,
     SearchResultComponent,
     // LoaderComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
   ],
   imports: [
     CommonModule,
