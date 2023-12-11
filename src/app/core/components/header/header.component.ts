@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       pic: "assets/media/images/header/zimbabwe.png",
-      name: "zimbabwe"
+      name: "Zimbabwe"
     },
     {
       pic: "assets/media/images/header/australia.png",

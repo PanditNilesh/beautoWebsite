@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { BreadcumDataService } from 'src/app/shared/services/breadcum-data.service';
 import { StaticDataService } from 'src/app/shared/services/static-data.service';
 import { member } from './../../core/mocks/member'
@@ -12,6 +12,12 @@ export class OurTeamComponent implements OnInit {
   categoryList: any;
   teamInfo: any;
   groupTeamData: any;
+  totalYears:any = 6;
+  totalClients:any = 50;
+  totalCountries:any = 4;
+  totalEmployees:any = 60;
+  connectClicked: boolean = false;
+  imgSrc:any='assets/media/images/team/Pramod sir.png';
   users: ({ pic: string; name: string; position: string; category: string; linkedin: string; } | { pic: string; name: string; position: string; category: string; linkedin?: undefined; })[];
   constructor(private breadcumDataService: BreadcumDataService, private staticDataService: StaticDataService) {
     let members = new member();
@@ -62,6 +68,14 @@ export class OurTeamComponent implements OnInit {
       }
     }
 
+  }
+
+  connect() {
+    this.connectClicked = true;
+  };
+
+  connectCloseClicked(event: boolean) {
+    this.connectClicked = event;
   }
 
 }

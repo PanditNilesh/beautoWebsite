@@ -26,9 +26,9 @@ export class AboutComponent implements OnInit, OnChanges {
   
   stones = [
     {
-      pic: "assets/media/images/about/6-anniversary.jpg",
-      year: "2023 Successful 6th Anniversary celebration and SWING entered into the market.",
-      desc: "Successfully celebrated 6th anniversary and expanding our horizons into the global world.Launched first industrial AGV - 'SWING' into market. Swing revolutionizes industrial automation by seamlessly integrating advanced robotics with intelligent navigation systems.Swing effortlessly transports goods and materials within various industries."
+      pic: "assets/media/images/about/journey_2023.jpg",
+      year: "Our first AGV-SWING entered into the market.",
+      desc: "Launched first industrial AGV - 'SWING' into market. Swing revolutionizes industrial automation by seamlessly integrating advanced robotics with intelligent navigation systems.Swing effortlessly transports goods and materials within various industries. Expanding our horizons into the global world on 6th Anniversary"
     },
     {
       pic: "assets/media/images/about/5-anniversary.webp",
@@ -48,7 +48,7 @@ export class AboutComponent implements OnInit, OnChanges {
     {
       pic: "assets/media/images/about/new-launches.png",
       year: "2019 Standardizing and many new launches",
-      desc: "Built our first mechanical workshop, procured several machines to support our physical product design capabilities. Our digital product design team started shaping up on the software front, & the development team grew from 30 to 45 by the end of 2019. Our software development capabilities got standardized."
+      desc: "Built our first mechanical workshop, procured several machines to support our physical product design capabilities. Our digital product design team started shaping up on the software front & the development team grew from 30 to 45 by the end of 2019. Our software development capabilities got standardized."
     },
     {
       pic: "assets/media/images/about/foundation-team.png",

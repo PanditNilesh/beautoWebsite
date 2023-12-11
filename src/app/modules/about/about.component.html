@@ -89,7 +89,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <div>
 
                         <div class="step justify-content-between ps-0 pt-0">
@@ -106,7 +106,7 @@
                                         <h6 class="font-weight-bold"> 2023 </h6>
 
                                     </div>
-                                    <p class="w-500 small-font">Successfull 6th Aniversary Celebration</p>
+                                    <p class="w-500 small-font">SWING-Industrial AGV entered into the market.</p>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                                     <div class="d-flex justify-content-between">
                                         <h6 class="font-weight-bold"> 2020 </h6>
                                     </div>
-                                    <p class="w-500 small-font">Grown The Digital Product Design Team</p>
+                                    <p class="w-500 small-font">Extension of Beauto</p>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                         <div class="d-flex justify-content-between">
                                             <h6 class="font-weight-bold"> 2019 </h6>
                                         </div>
-                                        <p class="w-500 small-font">Launch First Digital Product.</p>
+                                        <p class="w-500 small-font">Standardizing and many new launches.</p>
                                     </div>
                                 </div>
                             </div>
@@ -241,6 +241,12 @@
                 </div>
                 <div class="col-md-7 p-0">
 
+                    <div class="swiper-padding">
+                        <button (click)="slidePrev() " class="sbutton-prev"
+                            [ngClass]="{'sbutton-disabled':disablePrev===true}"></button>
+                        <button (click)="slideNext()" class="sbutton-next"
+                            [ngClass]="{'sbutton-disabled':disableNext===true}"></button>
+                    </div>
                     <swiper id="case-study" #swiper [virtual]="true" [slidesPerView]="1" [spaceBetween]="30"
                         [slidesPerGroup]="1" [loopFillGroupWithBlank]="true" [navigation]="true"
                         class="mySwiper stones">
@@ -253,17 +259,6 @@
                         </ng-template>
 
                     </swiper>
-
-                    <div class="swiper-padding">
-                        <button (click)="slidePrev() " class="sbutton-prev mb-2"
-                            [ngClass]="{'sbutton-disabled':disablePrev===true}"></button>
-                        <button (click)="slideNext()" class="sbutton-next"
-                            [ngClass]="{'sbutton-disabled':disableNext===true}"></button>
-                    </div>
-
-
-
-
                 </div>
 
             </div>

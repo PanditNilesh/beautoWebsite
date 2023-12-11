@@ -257,7 +257,8 @@
 
 .swiper-padding {
     padding-bottom: 3% !important;
-    padding-top: 3% !important;
+    display: flex;
+    justify-content: end;
 }
 
 .justify-text {

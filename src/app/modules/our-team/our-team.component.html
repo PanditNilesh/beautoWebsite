@@ -1,16 +1,15 @@
 <div class="pl-140 pt-100">
-    <app-breadcrumb></app-breadcrumb>
+  <app-breadcrumb></app-breadcrumb>
 </div>
 
-<section class="about-mobile">
+<!-- <section class="about-mobile">
     <div class="home position-relative">
-        <!-- <div class="about_img  "> <img src="assets/media/images/Union1.svg" alt=""> </div> -->
         <div class="tabinfo topPadding abouts pb-100">
             <div class="row  align-items-center ">
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="text-justify">
                         <div class="mw-50 ">
-                            <h1 class="our-team-heading"> Team...
+                            <h1 class="our-team-heading"> Team
                             </h1>
                             <h1 class="our-team-heading team-font">
                                 {{groupTeamData.team=="All"?"Beauto":groupTeamData.team}}
@@ -59,4 +58,448 @@
 
         </div>
     </div>
+</section> -->
+<!-- 
+<section class="about-mobile">
+    <div class="home position-relative">
+        <div class="tabinfo topPadding abouts pb-100">
+            <div class="row  align-items-center ">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="text-justify">
+                        <div class="mw-50 ">
+                            <h1 class="our-team-heading"> Team
+                            </h1>
+                            <span class="beauto-title">Beauto</span>
+                        </div>
+                        <p class="middle-content">Together we stand, together we fall. All for one and one for all!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- 
+<section>
+  <div class="row">
+    <div class="col-12 pb-100 home">
+      <div class="text-justify">
+        <div class="text-center">
+            <div class="bg-video-wrap">
+                <video class="background" loop autoplay playsinline oncanplay="this.play()"
+                    onloadedmetadata="this.muted = true">
+                    <source src="assets/media/video/Office teams 2_2.mp4" type="video/mp4">
+                </video>
+            </div>
+          <h1 class="our-team-heading">Team</h1>
+          <span class="beauto-title">Beauto</span>
+        </div>
+        <p class="middle-content">
+          Together we stand, together we fall. All for one and one for all!
+        </p>
+        <div class="text-center">
+            <button class="join-team-btn">Join our team</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="banner">
+    <div class="bg-video-wrap">
+        <video class="background" loop autoplay playsinline oncanplay="this.play()"
+            onloadedmetadata="this.muted = true">
+            <source src="assets/media/video/Office teams 2_4.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+        </div>
+        <div class="v_banner test">
+            <div class="d-flex justify-content-center align-items-center">
+                <h1 class="our-team-heading">Team</h1>
+                <span class="beauto-title">Beauto</span>
+            </div>
+            <!-- <div class="banner-title-small our-team-heading d-inline center"> Team </div> <span class="beauto-title">Beauto</span> -->
+            <div class=" center middle-content">
+                Together we stand, together we fall. All for one and one for all!
+            </div>
+            <button class="join-team-btn">Join our team</button>
+
+        </div>
+    </div>
 </section>
+<section class="middle-section">
+    <div class="left-bg">
+        <img src="assets/media/images/left-banner.png" alt="">
+    </div>
+    <div class="innovation-content">
+        Where <span class="bold-text"> innovation meets collaboration!</span> Comprising diverse talents and perspectives, <br>
+        our team is driven by a shared passion for excellence and a commitment to pushing boundaries. <br>
+        From creative thinkers to analytical minds, we thrive on the synergy of our unique skill sets.<br> 
+        Together, we navigate challenges, celebrate victories, and foster an environment that encourages <br>
+        continuous learning and growth.
+    </div>
+    <div class="right-bg">
+        <img src="assets/media/images/right-banner.png" alt="">
+    </div>
+</section>
+<section class="troops-of-beauto-section">
+   <h1 class="troops-title">Troops</h1><span class="of-beauto-content">of Beauto</span>
+   <span class="troops-of-beauto-para d-block">Meet the visionaries at the helm – explore to get acquainted with the diverse and accomplished individuals steering Beauto <br> Systems towards success with passion and expertise.</span>
+   <div class="bottom-border-div">
+    <span class="bottom-border"></span>
+   </div>
+   <div class="container beauto-team">
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div  class="backgrond-color">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="skyblue-svg" width="250" height="301" viewBox="0 0 250 301" fill="none">
+                    <path opacity="0.3" d="M241.87 0.820068H8C3.58172 0.820068 0 4.40179 0 8.82007V292.82C0 297.238 3.58172 300.82 8 300.82H241.87C246.288 300.82 249.87 297.238 249.87 292.82V8.82007C249.87 4.40179 246.288 0.820068 241.87 0.820068Z" fill="#2673E5"/>
+                </svg> -->
+                <img class="beauto-team-img" [src]="imgSrc" (mouseover)="imgSrc='assets/media/images/team/Pramod sir(1).png'" (mouseout)="imgSrc='assets/media/images/team/Pramod sir.png'" alt="CEO">
+                <!-- <img class="beauto-team-img" src="" alt="CEO"> -->
+                <div class="member-content">
+                    <h1 class="member-title">Pramod Palla</h1>
+                    <h3 class="member-designation">CEO</h3>
+                    <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div  class="backgrond-color">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="skyblue-svg" width="250" height="301" viewBox="0 0 250 301" fill="none">
+                    <path opacity="0.3" d="M241.87 0.820068H8C3.58172 0.820068 0 4.40179 0 8.82007V292.82C0 297.238 3.58172 300.82 8 300.82H241.87C246.288 300.82 249.87 297.238 249.87 292.82V8.82007C249.87 4.40179 246.288 0.820068 241.87 0.820068Z" fill="#2673E5"/>
+                </svg> -->
+            <img class="beauto-team-img" src="assets/media/images/team/cxo-2.png" alt="CEO">
+            <div class="member-content">
+                <h1 class="member-title">Saswat Sahu</h1>
+                <h3 class="member-designation">CTO</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+            </div>
+        </div>
+        <!-- <div class="col-sm-12 col-md-4">
+            <div  class="backgrond-color">
+                <svg xmlns="http://www.w3.org/2000/svg" class="skyblue-svg" width="250" height="301" viewBox="0 0 250 301" fill="none">
+                    <path opacity="0.3" d="M241.87 0.820068H8C3.58172 0.820068 0 4.40179 0 8.82007V292.82C0 297.238 3.58172 300.82 8 300.82H241.87C246.288 300.82 249.87 297.238 249.87 292.82V8.82007C249.87 4.40179 246.288 0.820068 241.87 0.820068Z" fill="#2673E5"/>
+                </svg>
+            <img class="beauto-team-img" src="assets/media/images/team/cxo-3.png" alt="CEO">
+            <div class="member-content">
+                <h1 class="member-title">Vinay Kumar Pingali</h1>
+                <h3 class="member-designation">Vice President</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+            </div>
+        </div> -->
+        <div class="col-sm-12 col-md-4">
+            <img src="assets/media/images/team/cxo-3.png" alt="CEO">
+            <div>
+                <h1 class="member-title">Vinay Kumar Pingali</h1>
+                <h3 class="member-designation">Vice President</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <img src="assets/media/images/team/cxo-5.png" alt="CEO">
+            <div>
+                <h1 class="member-title">Thabo Mark Maleka</h1>
+                <h3 class="business-head">Business Development & Partnerships</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <img src="assets/media/images/team/cxo-4.png" alt="CEO">
+            <div>
+                <h1 class="member-title">Somayajulu VJ Gadepalli</h1>
+                <h3 class="member-designation">Practise Head - Data Science</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+        </div>
+    </div>
+   </div>
+</section>
+
+<section class="mt-200">
+    <!-- <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 text-center ourstrengths">
+            
+        </div>
+    </div> -->
+    <div class="ourstrengths">
+        <div class="bgbluecard">
+        </div>
+            <div class="text-center">
+                <h1 class="troops-title">Benefits </h1><span class="of-beauto-content">to join Beauto</span>
+            <span class="troops-of-beauto-para d-block">Discover the unique advantages that set us apart – explore and learn how we improve the employee experience with <br> comprehensive perks, growth opportunities, and a vibrant work culture.</span>
+            <div class="bottom-border-div">
+             <span class="bottom-border"></span>
+            </div>
+            </div>
+            <div class="container">
+                <div class="row strengths">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                        <!--box1-->
+                        <div class="card-gary">
+                            <div class="left-7">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
+                                    <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
+                                </svg>
+                            </div>
+                            <img class="training-img" src="assets/media/images/training.svg" alt="">
+    
+                            <h2 class="cardtitle"> Training</h2>
+                            <h3 class="dsc">Mesmerizing designs with Next Gen <br> technology and frameworks. </h3>
+                        </div>
+                        <!--boxend-->
+                        <!--box1-->
+                        <div class="card-white cardspace">
+                            <div class="left-7">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
+                                    <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
+                                </svg>
+                            </div>
+                            <img class="training-img" src="assets/media/images/global.svg" alt="">
+    
+                            <h2 class="cardtitle"> Global Clientale</h2>
+                            <h3 class="dsc">Game changing insgihts through a <br> world-class Data analysis.</h3>
+                            
+                        </div>
+                    </div>
+    
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 m-cardspace">
+                        <div class="card-white ">
+                            <div class="left-7">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
+                                    <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
+                                </svg>
+                            </div>
+                            <img class="training-img" src="assets/media/images/career.svg" alt="">
+    
+                            <h2 class="cardtitle"> Career growth and Development</h2>
+                            <h3 class="dsc">Implement and forget, stability with <br> experience.</h3>
+                        </div>
+                        <div class="card-gary cardspace">
+                                <div class="left-7">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
+                                        <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
+                                    </svg>
+                                </div>
+                                <img class="training-img" src="assets/media/images/ofc-location.svg" alt="">
+        
+                                <h2 class="cardtitle"> Offices at multiple locations</h2>
+                                <h3 class="dsc">Automate the complete test </h3>
+                        </div>
+                    </div>
+    
+                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 res">
+                        <div class="tabgirdindi">
+                            <div class="card-gary">
+                                <div class="left-7">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
+                                        <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
+                                    </svg>
+                                </div>
+                                <img class="training-img" src="assets/media/images/team_work.svg" alt="">
+        
+                                <h2 class="cardtitle"> Team work</h2>
+                                <h3 class="dsc">Design your thoughts. </h3>
+                            
+                            </div>
+                            
+                            <div class="card-white cardspace">
+                                <div class="left-7">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
+                                        <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
+                                    </svg>
+                                </div>
+                                <img class="training-img" src="assets/media/images/work-balance.svg" alt="">
+        
+                                <h2 class="cardtitle"> Work-Life Balance</h2>
+                                <h3 class="dsc">Distributed and quick to market using Cloud and DevOps.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="mt-100">
+    <div class="text-center">
+    <h1 class="troops-title">Stats </h1><span class="of-beauto-content">about Beauto</span>
+    <span class="troops-of-beauto-para d-block">We open our books to share the highlights of our success, providing a snapshot of our accomplishments and essence of our <br> enterprise.</span>
+    </div>
+    <div class="bottom-border-div">
+     <span class="bottom-border"></span>
+    </div>
+   <div class="container">
+    <div class="row text-center">
+        <div class="col-sm-6 col-md-3">
+            <div>
+                <span class="countUp" [@countUp]="totalYears" appCountUp [appCountUp]="totalYears"></span><span  class="countUp">+</span>
+                <h4 class="counter-title">Years of strong team</h4>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div>
+                <span class="countUp" [@countUp]="totalClients" appCountUp [appCountUp]="totalClients"></span><span  class="countUp">+</span>
+                <h4 class="counter-title">Happy clients </h4>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div>
+                <span class="countUp" [@countUp]="totalCountries" appCountUp [appCountUp]="totalCountries"></span><span  class="countUp">+</span>
+                <h4 class="counter-title">Countries we work in</h4>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div>
+                <span class="countUp" [@countUp]="totalEmployees" appCountUp [appCountUp]="totalEmployees"></span><span  class="countUp">+</span>
+                <h4 class="counter-title">Employees</h4>
+            </div>
+        </div>
+    </div>
+   </div>
+</section> 
+
+<section>
+    <div class="text-center mt-150">
+        <h1 class="troops-title">Traditions </h1><span class="of-beauto-content">at Beauto</span>
+        <span class="troops-of-beauto-para d-block">Embracing a rich heritage, we cherishes moments that form the cornerstone of our corporate culture, fostering a dynamic and <br> inclusive environment where every team member contributes to our shared success.</span>
+    </div>
+    <div class="bottom-border-div">
+        <span class="bottom-border"></span>
+    </div>
+    <div class="container ">
+        <div class="row ml-28">
+            <div class="col-md-2 col-sm-3 mt-22 position-relative">
+                <img src="assets/media/images/team/image 10.png" alt="">
+                <img class="bday_cap_img" src="assets/media/images/team/bday_cap.svg" alt="">
+
+            </div>
+            <div class="col-md-2 col-sm-3 ml-28">
+                <img src="assets/media/images/team/image 9.png" alt="">
+                <div class="bday-btn">Bday celebrations</div>
+                <img class="ml-170" src="assets/media/images/team/star.png" alt="">
+                
+            </div>
+            <div class="col-md-2 col-sm-3 ml-68 position-relative">
+                <img class="cake_img" src="assets/media/images/team/cake.png" alt="">
+                <img src="assets/media/images/team/pot_luck_1 (1).png" alt="">
+            </div>
+            <div class="col-md-2 col-sm-3 ml-38">
+                <div class="potluck-btn">Potluck Party</div>
+                <img src="assets/media/images/team/pot_luck_1 (2).png" alt="">
+            </div>
+            <div class="col-md-2 col-sm-3 ml-45">
+                <img src="assets/media/images/team/pot_luck_1 (3).png" alt="">
+                <span class="party-btn">Cold Coffee Party</span>
+                <img class="potluck-img" src="assets/media/images/team/potluck.png" alt="">
+
+            </div>
+        </div>
+        <div class="row ml-28 mt-4">
+            <div class="col-md-4">
+                <img src="assets/media/images/team/festival-1.png" alt="">
+            </div>
+            <div class="col-md-4 ml-68 ">
+                <div class="festival-btn">Festival celebrations</div>
+                <div class="position-relative">
+                <img class="festival-img" src="assets/media/images/team/festival-2.png" alt="">
+                <img class="selfie-img" src="assets/media/images/team/selfie.png" alt="">
+
+                </div>
+            </div>
+            <div class="col-md-2 ml-110 position-relative">
+                <img class="cup-of-tea-img" src="assets/media/images/team/cup-of-tea.png" alt="">
+                <img src="assets/media/images/team/outing.png" alt="">
+                <div class="outing-btn">Outing</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s">
+    <div class="social-presence">
+        <div class="bg-skyblue">
+        </div>
+    
+    <div class="text-center mt-150">
+        <h1 class="troops-title">Our Social </h1><span class="of-beauto-content">Presence</span>
+        <span class="troops-of-beauto-para d-block">Explore the heartbeat of our brand through our presence where we connect, engage, and share the vibrant stories that define <br> our journey in the digital realm.</span>
+    </div>
+    <div class="bottom-border-div">
+        <span class="bottom-border"></span>
+    </div>
+        <div class="container">
+        <div class="row ml-28">
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <div class="heading d-flex">
+                        <img src="assets/media/images/logo_m.svg" alt="Logo">
+                        <div  class="card-title">
+                            <h3>Beauto Design Studio</h3>
+                            <p>6 months ago</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+
+                    </div>
+                    <div class="card-footer">
+                        <p>Cinematic Product Animation <br>
+                            Elevating Product Visualization to New Height</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 mt-56">
+                <div class="card">
+                    <div class="heading d-flex">
+                        <img src="assets/media/images/logo_m.svg" alt="Logo">
+                        <div  class="card-title">
+                            <h3>Quro Labs</h3>
+                            <p>1 months ago</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img class="w-100" src="assets/media/images/team/quro_labs.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <p>Update : We had an amazing last week at the India <br> Mobile Congress 2023, at Pragati Maidan, Delhi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <div class="heading d-flex">
+                        <img src="assets/media/images/logo_m.svg" alt="Logo">
+                        <div  class="card-title">
+                            <h3>Beauto Systems</h3>
+                            <p>2 months ago</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img class="w-100" src="assets/media/images/team/6th_anni.png" alt="">
+                    </div>
+                    <div class="card-footer">
+                        <p>"Beauto Systems wonderful 6th year anniversary <br> celebration".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+</section>
+
+<section class="bglet mt-100" *ngIf="!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Connect with us
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf="connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>
