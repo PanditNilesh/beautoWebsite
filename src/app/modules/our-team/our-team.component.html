@@ -122,7 +122,6 @@
             <div class=" center middle-content">
                 Together we stand, together we fall. All for one and one for all!
             </div>
-            <button class="join-team-btn">Join our team</button>
 
         </div>
     </div>
@@ -142,7 +141,7 @@
         <img src="assets/media/images/right-banner.png" alt="">
     </div>
 </section>
-<section class="troops-of-beauto-section">
+<section class="troops-of-beauto-section ">
    <h1 class="troops-title">Troops</h1><span class="of-beauto-content">of Beauto</span>
    <span class="troops-of-beauto-para d-block">Meet the visionaries at the helm – explore to get acquainted with the diverse and accomplished individuals steering Beauto <br> Systems towards success with passion and expertise.</span>
    <div class="bottom-border-div">
@@ -150,55 +149,74 @@
    </div>
    <div class="container beauto-team">
     <div class="row">
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-6 col-md-4">
             <div  class="backgrond-color">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="skyblue-svg" width="250" height="301" viewBox="0 0 250 301" fill="none">
-                    <path opacity="0.3" d="M241.87 0.820068H8C3.58172 0.820068 0 4.40179 0 8.82007V292.82C0 297.238 3.58172 300.82 8 300.82H241.87C246.288 300.82 249.87 297.238 249.87 292.82V8.82007C249.87 4.40179 246.288 0.820068 241.87 0.820068Z" fill="#2673E5"/>
-                </svg> -->
-                <img class="beauto-team-img" [src]="imgSrc" (mouseover)="imgSrc='assets/media/images/team/Pramod sir(1).png'" (mouseout)="imgSrc='assets/media/images/team/Pramod sir.png'" alt="CEO">
-                <!-- <img class="beauto-team-img" src="" alt="CEO"> -->
+                <img class="beauto-team-img"  [src]="imgSrc" (mouseover)="imgSrc='assets/media/images/team/Pramod sir(1).png'" (mouseout)="imgSrc='assets/media/images/team/Pramod sir.png'" alt="CEO">
                 <div class="member-content">
+                    <div class="title-bg"></div>
                     <h1 class="member-title">Pramod Palla</h1>
                     <h3 class="member-designation">CEO</h3>
                     <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-6 col-md-4">
             <div  class="backgrond-color">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="skyblue-svg" width="250" height="301" viewBox="0 0 250 301" fill="none">
-                    <path opacity="0.3" d="M241.87 0.820068H8C3.58172 0.820068 0 4.40179 0 8.82007V292.82C0 297.238 3.58172 300.82 8 300.82H241.87C246.288 300.82 249.87 297.238 249.87 292.82V8.82007C249.87 4.40179 246.288 0.820068 241.87 0.820068Z" fill="#2673E5"/>
-                </svg> -->
-            <img class="beauto-team-img" src="assets/media/images/team/cxo-2.png" alt="CEO">
+            <img class="cto-img" [src]="ctoImgSrc" (mouseover)="ctoImgSrc='assets/media/images/team/cto-1.png'" (mouseout)="ctoImgSrc='assets/media/images/team/cto.png'" alt="CEO">
             <div class="member-content">
+                <div class="title-bg"></div>
                 <h1 class="member-title">Saswat Sahu</h1>
                 <h3 class="member-designation">CTO</h3>
                 <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
             </div>
             </div>
         </div>
-        <!-- <div class="col-sm-12 col-md-4">
+        <div class="col-sm-6 col-md-4">
             <div  class="backgrond-color">
-                <svg xmlns="http://www.w3.org/2000/svg" class="skyblue-svg" width="250" height="301" viewBox="0 0 250 301" fill="none">
-                    <path opacity="0.3" d="M241.87 0.820068H8C3.58172 0.820068 0 4.40179 0 8.82007V292.82C0 297.238 3.58172 300.82 8 300.82H241.87C246.288 300.82 249.87 297.238 249.87 292.82V8.82007C249.87 4.40179 246.288 0.820068 241.87 0.820068Z" fill="#2673E5"/>
-                </svg>
-            <img class="beauto-team-img" src="assets/media/images/team/cxo-3.png" alt="CEO">
-            <div class="member-content">
-                <h1 class="member-title">Vinay Kumar Pingali</h1>
-                <h3 class="member-designation">Vice President</h3>
-                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
-            </div>
-            </div>
-        </div> -->
-        <div class="col-sm-12 col-md-4">
-            <img src="assets/media/images/team/cxo-3.png" alt="CEO">
-            <div>
-                <h1 class="member-title">Vinay Kumar Pingali</h1>
-                <h3 class="member-designation">Vice President</h3>
-                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+                <img class="beauto-team-img" src="assets/media/images/team/cxo-3.png" alt="CEO">
+                <div class="member-content">
+                    <div class="title-bg-vc"></div>
+                    <h1 class="member-title">Vinay Kumar Pingali</h1>
+                    <h3 class="member-designation">Vice President</h3>
+                    <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+                </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-6 col-md-4 mt-500">
+            <div  class="backgrond-color">
+            <img class="beauto-team-img" src="assets/media/images/team/cxo-5.png" alt="CEO">
+            <div class="member-content">
+                <div class="title-bg-business"></div>
+                <h1 class="member-title">Thabo Maleka</h1>
+                <h3 class="member-designation-business">Director Business Development <br> & Partnerships (EMEA)</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mt-500">
+            <div  class="backgrond-color">
+            <img class="beauto-team-img" src="assets/media/images/team/cxo-4.png" alt="CEO">
+            <div class="member-content">
+                <div class="title-bg-ds"></div>
+                <h1 class="member-title">Somayajulu VJ Gadepalli</h1>
+                <h3 class="member-designation">Practise Head - Data Science</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+           
+        </div> -->
+        <!-- <div class="col-sm-12 col-md-4">
+            <img src="assets/media/images/team/cxo-3.png" alt="CEO">
+            <div >
+                <div class="title-bg"></div>
+                <h1 class="member-title">Vinay Kumar Pingali</h1>
+                <h3 class="member-designation">Vice President</h3>
+                <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
+            </div>
+        </div> -->
+        <!-- <div class="col-sm-12 col-md-4">
             <img src="assets/media/images/team/cxo-5.png" alt="CEO">
             <div>
                 <h1 class="member-title">Thabo Mark Maleka</h1>
@@ -213,17 +231,12 @@
                 <h3 class="member-designation">Practise Head - Data Science</h3>
                 <p class="member-description">We have a strong and robust talented team <br> that comprise of various domains and <br> functionalities.</p>
             </div>
-        </div>
+        </div> -->
     </div>
    </div>
 </section>
 
-<section class="mt-200">
-    <!-- <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 text-center ourstrengths">
-            
-        </div>
-    </div> -->
+<section class="mt-200 position-relative">
     <div class="ourstrengths">
         <div class="bgbluecard">
         </div>
@@ -247,7 +260,7 @@
                             <img class="training-img" src="assets/media/images/training.svg" alt="">
     
                             <h2 class="cardtitle"> Training</h2>
-                            <h3 class="dsc">Mesmerizing designs with Next Gen <br> technology and frameworks. </h3>
+                            <h3 class="dsc">Prepare for higher roles by acquiring essential skills through our training initiatives. </h3>
                         </div>
                         <!--boxend-->
                         <!--box1-->
@@ -260,7 +273,7 @@
                             <img class="training-img" src="assets/media/images/global.svg" alt="">
     
                             <h2 class="cardtitle"> Global Clientale</h2>
-                            <h3 class="dsc">Game changing insgihts through a <br> world-class Data analysis.</h3>
+                            <h3 class="dsc">Building relationships across borders enhances career opportunities.</h3>
                             
                         </div>
                     </div>
@@ -274,8 +287,8 @@
                             </div>
                             <img class="training-img" src="assets/media/images/career.svg" alt="">
     
-                            <h2 class="cardtitle"> Career growth and Development</h2>
-                            <h3 class="dsc">Implement and forget, stability with <br> experience.</h3>
+                            <h2 class="cardtitle"> Career growth and opportunities</h2>
+                            <h3 class="dsc">Grow within the company, unlocking leadership positions..</h3>
                         </div>
                         <div class="card-gary cardspace">
                                 <div class="left-7">
@@ -283,10 +296,10 @@
                                         <rect x="42.2652" y="0.844238" width="59.2131" height="59.2131" rx="5" transform="rotate(45 42.2652 0.844238)" fill="#2673E5" fill-opacity="0.1"/>
                                     </svg>
                                 </div>
-                                <img class="training-img" src="assets/media/images/ofc-location.svg" alt="">
+                                <img class="training-img" src="assets/media/images/Fostering-inno.svg" alt="">
         
-                                <h2 class="cardtitle"> Offices at multiple locations</h2>
-                                <h3 class="dsc">Automate the complete test </h3>
+                                <h2 class="cardtitle"> Fostering innovation</h2>
+                                <h3 class="dsc">Continual innovation propels us to soaring heights, even amidst uncertainty, lighting the way to boundless possibilities. </h3>
                         </div>
                     </div>
     
@@ -301,7 +314,7 @@
                                 <img class="training-img" src="assets/media/images/team_work.svg" alt="">
         
                                 <h2 class="cardtitle"> Team work</h2>
-                                <h3 class="dsc">Design your thoughts. </h3>
+                                <h3 class="dsc">Utilize diverse skills and talents to achieve common goals </h3>
                             
                             </div>
                             
@@ -313,8 +326,8 @@
                                 </div>
                                 <img class="training-img" src="assets/media/images/work-balance.svg" alt="">
         
-                                <h2 class="cardtitle"> Work-Life Balance</h2>
-                                <h3 class="dsc">Distributed and quick to market using Cloud and DevOps.</h3>
+                                <h2 class="cardtitle"> Team diversity</h2>
+                                <h3 class="dsc">Diverse teams understand global markets better, adapting strategies effectively.</h3>
                             </div>
                         </div>
                     </div>
@@ -323,7 +336,7 @@
         </div>
 </section>
 
-<section class="mt-100">
+<!-- <section class="mt-100">
     <div class="text-center">
     <h1 class="troops-title">Stats </h1><span class="of-beauto-content">about Beauto</span>
     <span class="troops-of-beauto-para d-block">We open our books to share the highlights of our success, providing a snapshot of our accomplishments and essence of our <br> enterprise.</span>
@@ -359,7 +372,7 @@
         </div>
     </div>
    </div>
-</section> 
+</section>  -->
 
 <section>
     <div class="text-center mt-150">
@@ -369,16 +382,16 @@
     <div class="bottom-border-div">
         <span class="bottom-border"></span>
     </div>
-    <div class="container ">
-        <div class="row ml-28">
+    <div class="container mt-56">
+        <div class="row ml-18">
             <div class="col-md-2 col-sm-3 mt-22 position-relative">
                 <img src="assets/media/images/team/image 10.png" alt="">
                 <img class="bday_cap_img" src="assets/media/images/team/bday_cap.svg" alt="">
 
             </div>
-            <div class="col-md-2 col-sm-3 ml-28">
+            <div class="col-md-2 col-sm-3 ml-10">
                 <img src="assets/media/images/team/image 9.png" alt="">
-                <div class="bday-btn">Bday celebrations</div>
+                <p class="bday-celeb"> <span class="bday">Birthday</span> celebrations</p>
                 <img class="ml-170" src="assets/media/images/team/star.png" alt="">
                 
             </div>
@@ -387,22 +400,27 @@
                 <img src="assets/media/images/team/pot_luck_1 (1).png" alt="">
             </div>
             <div class="col-md-2 col-sm-3 ml-38">
-                <div class="potluck-btn">Potluck Party</div>
+                <!-- <div class="potluck-btn">Potluck Party</div> -->
+                <p class="bday-celeb"> <span class="bday">Potluck</span> Party</p>
                 <img src="assets/media/images/team/pot_luck_1 (2).png" alt="">
             </div>
             <div class="col-md-2 col-sm-3 ml-45">
                 <img src="assets/media/images/team/pot_luck_1 (3).png" alt="">
-                <span class="party-btn">Cold Coffee Party</span>
+                <div class="d-flex cc-div">
+                    <span class="cc-title">Cold Coffee</span><span class="cc-content">Party</span>
+                </div>
+
                 <img class="potluck-img" src="assets/media/images/team/potluck.png" alt="">
 
             </div>
         </div>
-        <div class="row ml-28 mt-4">
+        <div class="row ml-18 mt-4">
             <div class="col-md-4">
                 <img src="assets/media/images/team/festival-1.png" alt="">
             </div>
-            <div class="col-md-4 ml-68 ">
-                <div class="festival-btn">Festival celebrations</div>
+            <div class="col-md-4 ml-34">
+                <!-- <div class="festival-btn">Festival celebrations</div> -->
+                <p class="bday-celeb"> <span class="bday">Festival</span> celebrations</p>
                 <div class="position-relative">
                 <img class="festival-img" src="assets/media/images/team/festival-2.png" alt="">
                 <img class="selfie-img" src="assets/media/images/team/selfie.png" alt="">
@@ -410,9 +428,11 @@
                 </div>
             </div>
             <div class="col-md-2 ml-110 position-relative">
+                <p class="bday-celeb"> <span class="bday">Outing</span></p>
                 <img class="cup-of-tea-img" src="assets/media/images/team/cup-of-tea.png" alt="">
                 <img src="assets/media/images/team/outing.png" alt="">
-                <div class="outing-btn">Outing</div>
+                <!-- <div class="outing-btn">Outing</div> -->
+
             </div>
         </div>
     </div>
@@ -433,25 +453,27 @@
         <div class="container">
         <div class="row ml-28">
             <div class="col-md-4 col-sm-12">
-                <div class="card">
-                    <div class="heading d-flex">
-                        <img src="assets/media/images/logo_m.svg" alt="Logo">
-                        <div  class="card-title">
-                            <h3>Beauto Design Studio</h3>
-                            <p>6 months ago</p>
+                <div class="card bds-card">
+                        <div class="border-image">
+                        <div class="heading d-flex">
+                            <img src="assets/media/images/logo_m.svg" alt="Logo">
+                            <div  class="card-title">
+                                <h3>Beauto Design Studio</h3>
+                                <p>6 months ago</p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+
+                        </div>
+                        <div class="card-footer">
+                            <p>Cinematic Product Animation <br>
+                                Elevating Product Visualization to New Height</p>
                         </div>
                     </div>
-                    <div class="card-content">
-
-                    </div>
-                    <div class="card-footer">
-                        <p>Cinematic Product Animation <br>
-                            Elevating Product Visualization to New Height</p>
-                    </div>
-                </div>
+            </div>
             </div>
             <div class="col-md-4 col-sm-12 mt-56">
-                <div class="card">
+                <div class="card cards">
                     <div class="heading d-flex">
                         <img src="assets/media/images/logo_m.svg" alt="Logo">
                         <div  class="card-title">
@@ -468,7 +490,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <div class="card">
+                <div class="card cards">
                     <div class="heading d-flex">
                         <img src="assets/media/images/logo_m.svg" alt="Logo">
                         <div  class="card-title">

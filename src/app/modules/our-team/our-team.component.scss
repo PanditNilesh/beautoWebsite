@@ -240,6 +240,7 @@ img.img-fluid.my-3.rounded-circle {
 .troops-of-beauto-section {
     margin-top: 150px;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 .troops-title {
@@ -344,6 +345,17 @@ img.img-fluid.my-3.rounded-circle {
     letter-spacing: 0.2px;
 }
 
+.member-designation-business {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+}
+
 .business-head {
     color: rgba(0, 0, 0, 0.50);
     text-align: center;
@@ -371,6 +383,8 @@ img.img-fluid.my-3.rounded-circle {
 
 
 .ourstrengths {
+    // position: relative;
+    margin-top: 500px;
 
     .home-beauto {
         margin-bottom: 20px;
@@ -441,7 +455,7 @@ img.img-fluid.my-3.rounded-circle {
     position: absolute;
     width: 100%;
     z-index: -1;
-    margin-top: 23rem;
+    margin-top: 22rem;
 }
 
 .strengths {
@@ -460,17 +474,32 @@ img.img-fluid.my-3.rounded-circle {
     margin-left: 28px;
 }
 
+.ml-18 {
+    margin-left: 18px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
 .mt-22 {
     margin-top: 22px;
 }
 
 .ml-110 {
-    margin-left: 110px;
+    margin-left: 90px;
 }
 
-.ml-170{
+.ml-170 {
     margin-left: 170px;
+    margin-top: 30px;
 }
+
+.ml-38 {
+    margin-left: 39px;
+    margin-top: 15px;
+}
+
 .banner {
     position: relative;
     // top: 85px;
@@ -628,10 +657,72 @@ img.img-fluid.my-3.rounded-circle {
 
 .beauto-team-img:hover {
     position: absolute;
-    top: -14%;
+    top: -10px;
     left: 17%;
-    display: inline;
+    height: 361px;
+    width: 251px;
 }
+
+
+.cto-img {
+    position: absolute;
+    top: -16%;
+    left: 17%;
+}
+
+
+.cto-img:hover {
+    position: absolute;
+    // top: -1px;
+    left: 17%;
+    height: 355px;
+    width: 251px;
+}
+
+
+.title-bg {
+    width: 12px;
+    height: 24.045px;
+    transform: rotate(-90deg);
+    border-radius: 4px;
+    background: rgba(38, 115, 229, 0.15);
+    position: absolute;
+    top: 10%;
+    left: 21%;
+}
+
+.title-bg-vc {
+    width: 12px;
+    height: 24.045px;
+    transform: rotate(-90deg);
+    border-radius: 4px;
+    background: rgba(38, 115, 229, 0.15);
+    position: absolute;
+    top: 10%;
+    left: 9%;
+}
+
+.title-bg-ds {
+    width: 12px;
+    height: 24.045px;
+    transform: rotate(-90deg);
+    border-radius: 4px;
+    background: rgba(38, 115, 229, 0.15);
+    position: absolute;
+    top: 10%;
+}
+
+.title-bg-business {
+    width: 12px;
+    height: 24.045px;
+    transform: rotate(-90deg);
+    border-radius: 4px;
+    background: rgba(38, 115, 229, 0.15);
+    position: absolute;
+    top: 8%;
+    left: 22%;
+}
+
 
 .countUp {
     color: var(--Royal-Blue, #2673E5);
@@ -687,33 +778,69 @@ img.img-fluid.my-3.rounded-circle {
 
 
 .ml-68 {
-    margin-left: 68px;
+    margin-left: 60px;
     margin-top: 15px;
 }
 
-.ml-38 {
-    margin-left: 36px;
-    margin-top: 70px;
+.ml-34 {
+    margin-left: 34px;
+    margin-top: 26px;
 }
 
 .ml-45 {
-    margin-left: 45px;
+    margin-left: 34px;
 }
 
-.bday-btn {
-    border-radius: 35px;
-    border: 1px solid #2673E5;
-    background-color: #FFF;
+.bday {
     color: var(--Royal-Blue, #2673E5);
     text-align: center;
     font-family: Roboto;
-    font-size: 13px;
+    font-size: 22px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 24px;
-    letter-spacing: 0.13px;
-    padding: 12px 24px;
-    margin-top: 7px;
+    letter-spacing: 0.24px;
+    padding-right: 5px;
+}
+
+.bday-celeb {
+    color: var(--Royal-Blue, #2673E5);
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    display: flex;
+    letter-spacing: 0.24px;
+    margin-top: 10px;
+}
+
+.cc-title {
+    color: var(--Royal-Blue, #2673E5);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    padding-right: 4px;
+}
+
+.cc-content {
+    color: var(--Royal-Blue, #2673E5);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.cc-div {
+    position: relative;
+    left: 51%;
+    margin-top: 10px;
 }
 
 .potluck-btn {
@@ -747,7 +874,7 @@ img.img-fluid.my-3.rounded-circle {
     padding: 12px 24px;
     margin-top: 7px;
     display: inline-block;
-    left: 60%;
+    left: 54%;
     position: relative;
 }
 
@@ -788,6 +915,37 @@ img.img-fluid.my-3.rounded-circle {
     border-radius: 10px;
 }
 
+.bds-card {
+    border-radius: 5px; 
+    overflow: hidden; 
+}
+
+.border-image:hover {
+    border: 1px solid transparent;
+    border-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0%, #f9ce34),
+        color-stop(20%, #ee2a7b),
+        color-stop(40%, #6228d7),
+        color-stop(100%, #6228d7)
+    ) 1 stretch repeat;
+    border-radius: inherit;
+    transition: border-color 0.3s, border-radius 0.3s; 
+}
+
+.bds-card:hover .border-image {
+    border-color: #f9ce34;
+    border-radius: 5px;
+}
+
+
+.cards:hover{
+    border: 1px solid #2673E5;
+    cursor: pointer;
+}
+
 .card-title h3 {
     color: var(--Black, #000);
     font-family: Roboto;
@@ -815,7 +973,7 @@ img.img-fluid.my-3.rounded-circle {
     padding-left: 24px;
 }
 
-.card-footer{
+.card-footer {
     background-color: #FFF;
 }
 
@@ -829,20 +987,20 @@ img.img-fluid.my-3.rounded-circle {
     line-height: 24px;
 }
 
-.card-content{
+.card-content {
     background-color: #000;
     height: 160px;
 }
 
-.social-presence{
-    // position: relative;
-}
-
-.mt-56{
+.mt-56 {
     margin-top: 56px;
 }
 
-.bg-skyblue{
+.mt-500 {
+    margin-top: 500px;
+}
+
+.bg-skyblue {
     background: rgba(38, 115, 229, 0.15);
     height: 185px;
     position: absolute;
@@ -863,33 +1021,39 @@ img.img-fluid.my-3.rounded-circle {
     color: #fafafc;
 }
 
-.bday_cap_img{
+.bday_cap_img {
     position: absolute;
     top: 60%;
     left: 32%;
 }
 
-.potluck-img{
+.potluck-img {
     margin-left: 35px;
     margin-top: 10px;
 }
 
-.selfie-img{
+.selfie-img {
     position: absolute;
     top: -25%;
     left: 82%;
 }
 
-.cake_img{
+.cake_img {
     position: absolute;
     top: -20%;
 }
 
-.cup-of-tea-img{
+.cup-of-tea-img {
     position: absolute;
     top: 68%;
-    left: -45%;
+    left: -37%;
+    width: 45%;
 }
+
+.pt-5px {
+    padding-top: 3px;
+}
+
 @media (max-width: 820px) and (min-width: 720px) {
 
     .ourTeam {
@@ -909,8 +1073,8 @@ img.img-fluid.my-3.rounded-circle {
     }
 }
 
-@media (max-width: 1280px){
-    .selfie-img{
+@media (max-width: 1280px) {
+    .selfie-img {
         position: absolute;
         top: -25%;
         left: 92%;

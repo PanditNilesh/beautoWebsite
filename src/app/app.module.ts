@@ -33,8 +33,19 @@ const cookieConfig: NgcCookieConsentConfig = {
       background: '#007aff'
     }
   },
-  theme: 'edgeless',
-  type: 'opt-out'
+  theme: 'classic',
+  type: 'opt-out',
+  content: {
+    "message": "We use cookies to enhance your experience on our site. By continuing to use this site, you consent to our use of cookies. For more information, please read our . ",
+    "dismiss": "Accept",
+    "deny": "Decline",
+    "link": "Privacy Policy.",
+    "href": "https://cookiesandyou.com",
+    "policy": "Cookie Policy",
+    "cookieconsent_dismissed": "yes",
+    "close" : '&#x274c;'
+
+  }
 };
 
 @NgModule({

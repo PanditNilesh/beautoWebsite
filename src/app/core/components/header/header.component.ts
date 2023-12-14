@@ -29,7 +29,15 @@ export class HeaderComponent implements OnInit {
     {
       pic: "assets/media/images/header/australia.png",
       name: "Australia"
-    }
+    },
+    {
+      pic: "assets/media/images/header/saudi.png",
+      name: "Saudi"
+    },
+    {
+      pic: "assets/media/images/header/dubai.png",
+      name: "Dubai"
+    },
   ]
 
   constructor(private router:Router, private filteredDataService:FilteredDataService) {

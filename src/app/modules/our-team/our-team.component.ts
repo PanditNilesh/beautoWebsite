@@ -18,6 +18,7 @@ export class OurTeamComponent implements OnInit {
   totalEmployees:any = 60;
   connectClicked: boolean = false;
   imgSrc:any='assets/media/images/team/Pramod sir.png';
+  ctoImgSrc:string ='assets/media/images/team/cto.png'
   users: ({ pic: string; name: string; position: string; category: string; linkedin: string; } | { pic: string; name: string; position: string; category: string; linkedin?: undefined; })[];
   constructor(private breadcumDataService: BreadcumDataService, private staticDataService: StaticDataService) {
     let members = new member();
